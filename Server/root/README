@@ -1,0 +1,12 @@
+This directory contains files that are expected to be copied into the server when it is configured for being used for the practical sessions of the class. 
+
+The "root" directory here maps to the standard "/" of the Unix filesystem.
+
+For example the file
+
+          root/var/www/index.html
+
+is expected to be copied in the server to the destination directory
+
+              /var/www/index.html
+
