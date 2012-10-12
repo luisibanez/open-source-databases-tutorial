@@ -1,5 +1,5 @@
-MongoDB
-=======
+M
+=
 
 Contents:
 
