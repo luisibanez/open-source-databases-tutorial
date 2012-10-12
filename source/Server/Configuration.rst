@@ -1,3 +1,7 @@
+Server Configuration
+====================
+
+How to set up a server from scratch, to be used a working machine for the Tutorial sessions.
 
 sudo aptitude update
 sudo aptitude upgrade
