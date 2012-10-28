@@ -16,7 +16,9 @@ adduser \
 sshdir="/home/$1/.ssh"
 mkdir $sshdir
 chmod 700 $sshdir
+cp $1     $sshdir
 cp $1.pub $sshdir
+cat $1.pub >> $sshdir/authorized_keys
 chown $1:$1 -R $sshdir
 
 # Manually Send the private key to the new user.
