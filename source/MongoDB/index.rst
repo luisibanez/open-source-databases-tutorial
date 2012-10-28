@@ -7,7 +7,7 @@ Contents:
    :maxdepth: 2
 
    Overview.rst
-   JASON.rst
+   JSON.rst
    Installation.rst
    Create.rst
    Update.rst
