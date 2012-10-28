@@ -17,6 +17,5 @@ To Create table:
 
 ::
 
-  create table customer(id varchar(15) primary key, fname varchar(30) not null, lname varchar(30) not null unique);
-
+  create table customer(id varchar(20) primary key, fname varchar(50) not null, lname(50) not null unique);
 
