@@ -4,8 +4,12 @@
 # to the class server. The purpose of these keys is to avoid
 # allowing SSH password logins.
 #
+keyfilename=$1
+
+commenttext=$2
+
 ssh-keygen \
 -t rsa \
--C "Open-Source-Database-Tutorial" \
+-C "$commenttext" \
 -P "Three DBAs walk into a NoSQL bar" \
--f $1
+-f $keyfilename
