@@ -1,6 +1,7 @@
-How To Install
-==============
+Links
+=====
 
-   sudo aptitude install mongodb
+The following is a list of useful links
+
 
 
