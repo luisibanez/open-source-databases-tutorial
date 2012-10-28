@@ -1,6 +1,7 @@
-How To Install
-==============
+Query Inconsistencies
+=====================
 
-   sudo aptitude install mongodb
-
+The flexibility of storage in a schema-less database comes at the price of less
+structured queries.
+ 
 
