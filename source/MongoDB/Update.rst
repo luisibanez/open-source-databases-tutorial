@@ -92,6 +92,46 @@ of your peers may have selected the same movies as their favorites and during
 the process of insertion MongoDB considers each one of them to be an
 independent document.
 
+More Examples
+`````````````
+
+Here are a few more examples
+
+`The Matrix Reloaded`_
+
+::
+
+        {
+          title: "The Matrix Reloaded",
+          year: 2003,
+          directors: [ "Andy Wachowski", "Lana Wachowski" ],
+          writers: [ "Andy Wachowski", "Lana Wachowski" ],
+          stars: [ "Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"] 
+        }
+
+`The Matrix Revolutions`_
+
+::
+
+        {
+          title: "The Matrix Revolutions",
+          year: 2003,
+          directors: [ "Andy Wachowski", "Lana Wachowski" ],
+          writers: [ "Andy Wachowski", "Lana Wachowski" ],
+          stars: [ "Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"] 
+        }
+
+`Freedom Writers`_
+
+::
+
+        {
+          title: "Freedom Writers",
+          year: 2007,
+          director: "Richard LaGravanase",
+          writers: [ "Richard LaGravenese", { book : [ "Zlata Filpovic", "Erin Gruwell" ] } ],
+          stars: [ "Hilary Swank", "Imelda Stauton", "Patrick Dempsey" ]
+        }
 
 .. _MongoDB: http://www.mongodb.org/
 .. _JSON: http://www.json.org/
@@ -103,4 +143,6 @@ independent document.
 .. _update: http://www.mongodb.org/display/DOCS/Updating#Updating-update%28%29
 .. _$set: http://www.mongodb.org/display/DOCS/Updating#Updating-%24set
 .. _IMDB: http://www.imdb.com/
-
+.. _The Matrix Reloaded: http://www.imdb.com/title/tt0234215/
+.. _The Matrix Revolutions: http://www.imdb.com/title/tt0242653/
+.. _Freedom Writers: http://www.imdb.com/title/tt0463998/
