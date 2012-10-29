@@ -56,7 +56,7 @@ For example
 
   db.movies.update(
        { title: "The Matrix" },
-       { $set : { "year", 2000 } }
+       { $set : { "year": 2000 } }
     )
 
 Here we are selecting the documents corresponding to movies whose title matches "The Matrix", and then we are replacing their "year" field with the value "2000".
