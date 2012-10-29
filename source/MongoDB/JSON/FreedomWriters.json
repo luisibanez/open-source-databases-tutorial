@@ -1,0 +1,7 @@
+{
+  title: "Freedom Writers",
+  year: 2007,
+  director: "Richard LaGravanase",
+  writers: [ "Richard LaGravenese", { book : [ "Zlata Filpovic", "Erin Gruwell" ] } ],
+  stars: [ "Hilary Swank", "Imelda Stauton", "Patrick Dempsey" ]
+}

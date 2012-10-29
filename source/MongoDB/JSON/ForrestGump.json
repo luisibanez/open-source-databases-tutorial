@@ -1,0 +1,7 @@
+{
+  title: "Forrest Gump",
+  year: 1994,
+  director: "Robert Zemeckis",
+  writers: [ "Winston Groom", "Eric Roth" ],
+  stars: [ "Tom Hanks", "Robin Wright", "Gary Sinise" ]
+}
