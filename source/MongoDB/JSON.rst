@@ -1,5 +1,5 @@
-JSON
-====
+JSON/BSON
+=========
 
 `MongoDB`_ is a `JSON`_ document database.
 
@@ -10,6 +10,9 @@ Therefore, a given Mongo document can have fields that no other documents have
 in the same database.  This gives you a lot of flexibility when your data is
 heterogeneous and you can not anticipate all the details of the schema in
 advance.
+
+JSON
+----
 
 `JSON`_ is a data representation format based on plain text.
 
@@ -49,7 +52,7 @@ on how data can be represented.
 
 
 BSON
-====
+----
 
 `MongoDB`_ uses `BSON`_ as the data storage and network transfer format for "documents". 
 
