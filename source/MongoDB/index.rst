@@ -7,6 +7,7 @@ Contents:
    :maxdepth: 2
 
    Overview.rst
+   DataModel.rst
    JSON.rst
    Installation.rst
    Create.rst
