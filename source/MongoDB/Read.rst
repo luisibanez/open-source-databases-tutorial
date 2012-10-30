@@ -95,7 +95,67 @@ Such query will return something similar to:
 .. image:: ../../images/MongoCommandShell09.png
    :scale: 100 %
 
+Operators
+`````````
 
+The following query will return the titles and not the ids of all movies in the collection
+produced after 2001
+
+::
+
+   db.movies.find( { year : { $gt : 2001 } }, { title : 1, _id : 0 } )
+
+the output will look like
+
+.. image:: ../../images/MongoCommandShell10.png
+   :scale: 100 %
+
+The $gt `operator`_ stands for *greater than*.
+
+Therefore, the expression:
+
+::
+
+    { year : { $gt : 2001 } }
+
+reads as the condition: *where the year is greater than 2001*.
+
+The expression:
+
+::
+
+    { year : { $ne : 2003 } }
+
+reads as the condition: *where the year is not equal to 2003*.
+
+
+Other `operators`_ include 
+
+* $ne  Non equal
+* $lt  Less than
+* $lte Less than or equal
+* $gt  Greater than
+* $gte Greater than or equal
+* $in  In a set (for arrays)
+* $nin Not in a set
+* $all For arrays, containing all the elements of the argument array
+
+These operators are complemented with logical operators.
+
+* $and 
+* $or
+* $nor
+* $not
+
+The first three connect two logical conditions.
+
+There are also geospatial operators that can be applied to geographical coordinates fields
+
+* $near
+* $within
+* $box
+* $polygon
+* $center
 
 
 
@@ -105,4 +165,5 @@ Such query will return something similar to:
 .. _find: http://www.mongodb.org/display/DOCS/Advanced+Queries#AdvancedQueries-Intro
 .. _field _id: http://www.mongodb.org/display/DOCS/Object+IDs#ObjectIDs-The\idField
 .. _regular expression: http://www.mongodb.org/display/DOCS/Advanced+Queries#AdvancedQueries-RegularExpressions
-
+.. _operator: http://docs.mongodb.org/manual/reference/operators/
+.. _operators: http://docs.mongodb.org/manual/reference/operators/
