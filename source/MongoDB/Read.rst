@@ -157,6 +157,22 @@ There are also geospatial operators that can be applied to geographical coordina
 * $polygon
 * $center
 
+Javascript
+----------
+
+Because Javascript is the default languge for interacting with `MongoDB`_
+it is possible to perform queries by building Javascript objects.
+
+For example:
+
+::
+ 
+  var years_range = {}
+  years_range['$lt'] = 2009
+  years_range['$gt'] = 1995
+  db.movies.find({ year : years_range } )
+
+
 
 
 .. _MongoDB: http://www.mongodb.org/
