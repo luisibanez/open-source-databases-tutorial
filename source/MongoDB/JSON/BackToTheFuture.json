@@ -1,0 +1,7 @@
+{
+  title: "Back to the Future",
+  year: 1985,
+  director: "Robert Zemeckis",
+  writers: [ "Robert Zemeckis", "Bob Gale" ],
+  stars: [ "Michael J. Fox", "Christopher Lloyd", "Lea Thompson" ]
+}
