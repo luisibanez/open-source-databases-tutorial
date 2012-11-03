@@ -5,6 +5,6 @@ function printResult(r) {
 var years_range = {}
 years_range['$lt'] = 2009
 years_range['$gt'] = 1995
-db.movies.find({ year : years_range } ).forEach(print)
+db.movies.find({ year : years_range } ).forEach(printResult)
 
 
