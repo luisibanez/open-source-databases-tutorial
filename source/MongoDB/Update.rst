@@ -80,7 +80,7 @@ Notice how the value of the "year" field has changed after we use the `update`_
 command.
 
 Exercise
---------
+````````
 
 * Go to the Movie Database `IMDB`_
 * Find three of your favorite movies
@@ -92,8 +92,66 @@ of your peers may have selected the same movies as their favorites and during
 the process of insertion MongoDB considers each one of them to be an
 independent document.
 
+Command Line
+------------
+
+In addition to creating entries from the interactive MongoDB interpreter shell,
+we can also use Javascript files as the mechanism for entering data in a mongo
+database.
+
+Let write the following in a file called  "insertOneMovie.js":
+
+::
+
+        db.movies.insert(
+        {
+          title: "The Matrix",
+          year: 1999,
+          directors: [ "Andy Wachowski", "Lana Wachowski" ],
+          writers: [ "Andy Wachowski", "Lana Wachowski" ],
+          stars: [ "Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"] 
+        }
+        )
+
+Then, we can perform the actual entry insertion with the following command
+
+::
+
+     mongo  entertainment  ./insertOneMovie.js
+
+
+Where the first argument "entertainment" is the name of our database.
+
+
+If we are working in a remote machine, we could write the script locally using
+our favorite text editor, and then we can copy our insertOneMovie.js file, to
+the server by using the command:
+
+::
+
+     scp  insertOneMovie.js  username@hostname
+
+Where:
+
+* "username" should be your actual username in that server
+* "hostname" should be your actual name of that server
+
+Finally, we can then use the command in the server:
+
+::
+
+     mongo  entertainment  ./insertOneMovie.js
+
+
+Exercise
+````````
+
+Use this mechanism to enter two more of your favorite movies from the `IMDB`_
+database.
+
 More Examples
-`````````````
+-------------
+
 
 Here are a few more examples
 
@@ -132,6 +190,11 @@ Here are a few more examples
           writers: [ "Richard LaGravenese", { book : [ "Zlata Filpovic", "Erin Gruwell" ] } ],
           stars: [ "Hilary Swank", "Imelda Stauton", "Patrick Dempsey" ]
         }
+
+You will find more examples in the following directory:
+
+https://github.com/luisibanez/open-source-databases-tutorial/tree/master/source/MongoDB/JSON
+
 
 .. _MongoDB: http://www.mongodb.org/
 .. _JSON: http://www.json.org/
