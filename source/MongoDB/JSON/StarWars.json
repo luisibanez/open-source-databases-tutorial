@@ -1,0 +1,7 @@
+{
+  title: "Star Wars",
+  year: 1977,
+  director: "George Lucas",
+  writer: "George Lucas",
+  stars: [ "Mark Hamill", "Harrison Ford", "Carrie Fisher" ]
+}

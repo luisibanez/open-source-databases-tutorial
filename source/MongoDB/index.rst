@@ -12,6 +12,7 @@ Contents:
    Installation.rst
    Create.rst
    Update.rst
+   Nesting.rst
    Read.rst
    SchemaFree.rst
    DuplicateEntries.rst
