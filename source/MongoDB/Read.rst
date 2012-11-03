@@ -79,6 +79,9 @@ the output would look like:
 
 More interesting queries can be made by taking advantage of operators.
 
+Regular Expressions
+~~~~~~~~~~~~~~~~~~~
+
 For example we can find all the movies whose title start with "F" and retrieve their title and year:
 
 ::
@@ -95,8 +98,22 @@ Such query will return something similar to:
 .. image:: ../../images/MongoCommandShell09.png
    :scale: 100 %
 
+In order to see the titles and directors of all movies in our collection that
+contain the word "Matrix" in the title we can use
+
+::
+
+   db.movies.find( { title : /Matrix/ }, { title : 1, directors : 1, _id : 0 } )
+
+Exercise
+````````
+
+Test the combinations of replacing "1" with "0" in the selected fields in the
+query above.
+
+
 Operators
-`````````
+~~~~~~~~~
 
 The following query will return the titles and not the ids of all movies in the collection
 produced after 2001
@@ -157,6 +174,23 @@ There are also geospatial operators that can be applied to geographical coordina
 * $polygon
 * $center
 
+Arrays
+~~~~~~
+
+In order to search in fields whose values are arrays we can simply ask for a value.
+
+For example:
+
+::
+
+    db.movies.find( { directors : "Andy Wachowski"  }, { title : 1, directors : 1, _id : 0 } )
+
+Exercise
+````````
+
+Find all the movies where "Keanu Reeves" is in the list of stars.
+
+
 Javascript
 ----------
 
@@ -167,10 +201,15 @@ For example:
 
 ::
  
-  var years_range = {}
-  years_range['$lt'] = 2009
-  years_range['$gt'] = 1995
-  db.movies.find({ year : years_range } )
+        function printResult(r) {
+         print(tojson(r))
+        }
+
+        var years_range = {}
+        years_range['$lt'] = 2009
+        years_range['$gt'] = 1995
+        db.movies.find({ year : years_range } ).forEach(printResult)
+
 
 
 
