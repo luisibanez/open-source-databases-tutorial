@@ -14,6 +14,7 @@ Contents:
    Update.rst
    Nesting.rst
    Read.rst
+   Remove.rst
    SchemaFree.rst
    DuplicateEntries.rst
    Sharding.rst
