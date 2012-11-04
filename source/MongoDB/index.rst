@@ -19,5 +19,6 @@ Contents:
    DuplicateEntries.rst
    Sharding.rst
    QueryInconsistency.rst
+   WhoUsesIt.rst
    Links.rst
 
