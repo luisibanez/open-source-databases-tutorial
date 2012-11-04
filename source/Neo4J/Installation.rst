@@ -51,4 +51,42 @@ You can test it by invoking the Neo4j command shell
     neo4j-shell
 
 
+Web Interface
+~~~~~~~~~~~~~
+
+Neo4j includes a well-crafted web interface.
+
+In order to make it accessible, we must open the port 7474 in the server.
+
+This is done with the command:
+
+::
+
+   sudo iptables -A INPUT -p tcp --dport 7474 -j ACCEPT
+
+and the effect can be verified with 
+
+::
+
+   ss -lpn
+
+and with
+
+::
+
+   netstat -anp | grep 7474
+
+With this, you can now connect to the web administration tool using
+
+::
+
+   firefox  http://192.168.200.148:7474/webadmin
+
+and
+
+::
+
+   firefox  http://192.168.200.148:7474/db/data
+
+
 
