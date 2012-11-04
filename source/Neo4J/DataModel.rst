@@ -12,7 +12,7 @@ Graph
 * `Nodes`_ have `Properties`_.
 * `Relationships`_ organize the graph.
 * `Relationships`_ have `Properties`_.
-* `Relationsihps`_ are directed links between nodes.
+* `Relationships`_ are directed links between nodes.
 * `Properties`_ are key-value pairs where the key is a string.
 * The values of `Properties`_ in `Neo4J`_ can have one of several `Types`_
 * Queries are done by `Traversing`_ the Graph navigating from one Node to another along a `Path`_.
