@@ -10,7 +10,6 @@ graph.
 The most generic of data structures, a graph elegantly represents any kind of
 data, preserving the natural structure of the domain.
 
-.. _Neo4J: http://neo4j.org
 
 Main Features
 -------------
@@ -56,4 +55,5 @@ Why Neo4J
 * Highly Connected Data
 
  * While a RDMBS is optimized for aggregated data, a graph database is optimized for highly connected data.
+
 .. _Neo4J: http://neo4j.org/
