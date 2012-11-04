@@ -14,32 +14,34 @@ Here we list a few of them
 * Ameritrade
 * Bank of England
 * Barclays Bank
+* Beth Israel Deaconess Medical Center (Harvard Medical School)
 * Care Centric
 * Cedars-Sinai
-* SCS Computer Sciences Ltd
 * Ditigal Technology International (DTI)
 * Dynacare
 * EMIS
 * Epic Systems Corporation
+* European Space Agency
 * FISERV/Maestro Projects Group
 * Four Points Technology, LLC
 * GE Healthcare (formerly IDX Systems and Centricity)
-* iSOFT PIc & ISOFT Medical Systems Ltd
 * Kaiser Permanente
+* MEDITECH
 * McKesson
 * MeDecision, Inc.
-* MEDITECH
 * Midas
+* Morgan Stanley
 * Netsmart Technologies
 * Partners HealthCare
 * QuadraMed
 * Quest Diagnostics
-* SIEMENS Medical Solutions USA, Inc.
+* Royal Bank of Thailand
+* SCS Computer Sciences Ltd
 * SIEMENS AG Medical Solitions
+* SIEMENS Medical Solutions USA, Inc.
 * Sunquest Information Systems
 * Tenent Healthcare
-* US Department of Veterans Affairs
 * US Department of Defense
+* US Department of Veterans Affairs
 * US Indian Health Service
-* European Space Agency
-* Beth Israel Deaconess Medical Center (Harvard Medical School)
+* iSOFT PIc & ISOFT Medical Systems Ltd
