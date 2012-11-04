@@ -65,6 +65,10 @@ REST
 
 Note that similar insertions of data could be done from the `REST`_ interface, for example by using `curl`_.
 
+
+Nodes
+`````
+
 For example, we could add a movie with
 
 ::
@@ -81,7 +85,9 @@ or add a person with
      -H "Content-Type: application/json" \
      -d '{"name":"Terry Gross","gender":"Female"}'
 
-and add a relationship with
+Relationships
+`````````````
+We can add a relationship with the command
 
 ::
 
