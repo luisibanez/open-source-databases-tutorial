@@ -23,6 +23,7 @@ Main Features
 * A powerful traversal framework for high-speed traversals in the node space
 * Can be deployed as a full server or a very slim database with a small footprint (~750k jar)
 * A simple and convenient object-oriented API
+* True ACID transactions
 
 Why Neo4J
 ---------
@@ -52,4 +53,7 @@ Why Neo4J
  * Ruby
  * Gremlin 
 
+* Highly Connected Data
 
+ * While a RDMBS is optimized for aggregated data, a graph database is optimized for highly connected data.
+.. _Neo4J: http://neo4j.org/
