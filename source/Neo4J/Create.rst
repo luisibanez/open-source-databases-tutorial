@@ -42,7 +42,7 @@ from inside the `Neo4j`_ shell.
 REST
 ----
 
-Neo4j provides a REST interface.
+Neo4j provides a `REST`_ interface.
 
 This means that we can send data to the Neo4j server by using HTTP messages,
 and we can received data back also via HTTP messages.
@@ -197,3 +197,4 @@ the relationship type "DIRECTED".
 .. _Properties: http://docs.neo4j.org/chunked/stable/graphdb-neo4j-properties.html
 .. _Dashboard: http://docs.neo4j.org/chunked/stable/webadmin-dashboard.html
 .. _Data Browser: http://docs.neo4j.org/chunked/stable/webadmin-data.html
+.. _REST: http://docs.neo4j.org/chunked/milestone/rest-api.html
