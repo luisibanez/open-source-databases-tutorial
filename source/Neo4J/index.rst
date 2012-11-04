@@ -12,4 +12,5 @@ Contents:
    Create.rst
    Update.rst
    Read.rst
+   WhoUsesIt.rst
 
