@@ -38,6 +38,40 @@ Comparison
 
  * When the values have Keys themselves, the underlying structure is the one of a graph.
 
+Internals
+---------
+
+You don't need to read this section if you are only interested in using Neo4j in an application.
+
+But if you are curious about how Neo4j does the internal magic, you may find this interesting.
+
+The `internal storage`_ of `Neo4j`_ uses a `double-linked-list`_ data structure.
+
+The content of these data structures is stored the following collection of files:
+
+* /var/lib/neo4j/data/graph.db/neostore
+* /var/lib/neo4j/data/graph.db/neostore.id
+* /var/lib/neo4j/data/graph.db/neostore.nodestore.db
+* /var/lib/neo4j/data/graph.db/neostore.nodestore.db.id
+* /var/lib/neo4j/data/graph.db/neostore.propertystore.db
+* /var/lib/neo4j/data/graph.db/neostore.propertystore.db.arrays
+* /var/lib/neo4j/data/graph.db/neostore.propertystore.db.arrays.id
+* /var/lib/neo4j/data/graph.db/neostore.propertystore.db.id
+* /var/lib/neo4j/data/graph.db/neostore.propertystore.db.index
+* /var/lib/neo4j/data/graph.db/neostore.propertystore.db.index.id
+* /var/lib/neo4j/data/graph.db/neostore.propertystore.db.index.keys
+* /var/lib/neo4j/data/graph.db/neostore.propertystore.db.index.keys.id
+* /var/lib/neo4j/data/graph.db/neostore.propertystore.db.strings
+* /var/lib/neo4j/data/graph.db/neostore.propertystore.db.strings.id
+* /var/lib/neo4j/data/graph.db/neostore.relationshipstore.db
+* /var/lib/neo4j/data/graph.db/neostore.relationshipstore.db.id
+* /var/lib/neo4j/data/graph.db/neostore.relationshiptypestore.db
+* /var/lib/neo4j/data/graph.db/neostore.relationshiptypestore.db.id
+* /var/lib/neo4j/data/graph.db/neostore.relationshiptypestore.db.names
+* /var/lib/neo4j/data/graph.db/neostore.relationshiptypestore.db.names.id
+
+The filenames are self-descriptive of their content.
+
 .. _Graph:  http://docs.neo4j.org/chunked/stable/what-is-a-graphdb.html
 .. _Neo4j: http://neo4j.org/
 .. _navigates a document store: http://docs.neo4j.org/chunked/stable/tutorial-comparing-models.html#_a_graph_database_navigates_a_document_store
@@ -50,4 +84,5 @@ Comparison
 .. _Path: http://docs.neo4j.org/chunked/stable/graphdb-neo4j-paths.html
 .. _Traversing: http://docs.neo4j.org/chunked/stable/graphdb-neo4j-traversal.html
 .. _Types: http://docs.neo4j.org/chunked/stable/graphdb-neo4j-properties.html
-
+.. _internal storage: http://digitalstain.blogspot.com/2011/11/rooting-out-redundancy-new-neo4j.html
+.. _double-linked-list: http://en.wikipedia.org/wiki/Doubly_linked_list
