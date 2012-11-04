@@ -4,7 +4,7 @@ Data Model
 Graph
 -----
 
-`Neo4J`_  uses a `Graph`_ data model.
+`Neo4j`_  uses a `Graph`_ data model.
 
 .. image:: ../../images/Neo4j-DataModel.svg
 
@@ -14,7 +14,7 @@ Graph
 * `Relationships`_ have `Properties`_.
 * `Relationships`_ are directed links between nodes.
 * `Properties`_ are key-value pairs where the key is a string.
-* The values of `Properties`_ in `Neo4J`_ can have one of several `Types`_
+* The values of `Properties`_ in `Neo4j`_ can have one of several `Types`_
 * Queries are done by `Traversing`_ the Graph navigating from one Node to another along a `Path`_.
 * Indexes look-up `Nodes`_ or `Relationships`_.
 
@@ -39,7 +39,7 @@ Comparison
  * When the values have Keys themselves, the underlying structure is the one of a graph.
 
 .. _Graph:  http://docs.neo4j.org/chunked/stable/what-is-a-graphdb.html
-.. _Neo4J: http://neo4j.org/
+.. _Neo4j: http://neo4j.org/
 .. _navigates a document store: http://docs.neo4j.org/chunked/stable/tutorial-comparing-models.html#_a_graph_database_navigates_a_document_store
 .. _elaborates a Key-Value store: http://docs.neo4j.org/chunked/stable/tutorial-comparing-models.html#_a_graph_database_elaborates_a_key_value_store
 .. _creates relationsips in Column-Family: http://docs.neo4j.org/chunked/stable/tutorial-comparing-models.html#_a_graph_database_relates_column_family

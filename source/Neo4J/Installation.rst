@@ -31,7 +31,7 @@ Do the following steps
 
   sudo apt-get update
 
-* Install the Neo4J Debian package with
+* Install the Neo4j Debian package with
 
 ::
 
@@ -42,9 +42,9 @@ Do the following steps
  * It will be OK to ignore the warning
  * at least for the purpose of playing with this tutorial.
 
-At this point you should have Neo4J installed.
+At this point you should have Neo4j installed.
 
-You can test it by invoking the Neo4J command shell
+You can test it by invoking the Neo4j command shell
 
 ::
 

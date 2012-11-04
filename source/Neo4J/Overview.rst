@@ -4,7 +4,7 @@ Overview
 .. image:: ../../images/neo4j.png
    :scale: 75 %
 
-`Neo4J`_ is a graph database, storing data in the nodes and relationships of a
+`Neo4j`_ is a graph database, storing data in the nodes and relationships of a
 graph.
 
 The most generic of data structures, a graph elegantly represents any kind of
@@ -14,7 +14,7 @@ data, preserving the natural structure of the domain.
 Main Features
 -------------
 
-`Neo4J`_ is an open source project,
+`Neo4j`_ is an open source project,
 
 * An intuitive graph-oriented model for data representation
 * A disk-based, native storage manager completely optimized for storing graph structures for maximum performance and scalability
@@ -24,17 +24,17 @@ Main Features
 * A simple and convenient object-oriented API
 * True ACID transactions
 
-Why Neo4J
+Why Neo4j
 ---------
 
 * Flexibility
 
- * The Graph nature of Neo4J implies that it can adapt easily to describe many problems.
- * It has been called *whiteboard friendly* meaning that *if you can represent the problem in a whiteboard by drawing boxes and relationships, then you can store it in Neo4J*.
+ * The Graph nature of Neo4j implies that it can adapt easily to describe many problems.
+ * It has been called *whiteboard friendly* meaning that *if you can represent the problem in a whiteboard by drawing boxes and relationships, then you can store it in Neo4j*.
 
 * Focus on Relationships
  
- * Rather than focusing on the commonalities among sets of values, Neo4J focuses on the relationships between values.
+ * Rather than focusing on the commonalities among sets of values, Neo4j focuses on the relationships between values.
  * Therefore, it can store highly variable data and still explore its relationships in a natural way.
 
 * Scalable
@@ -56,4 +56,4 @@ Why Neo4J
 
  * While a RDMBS is optimized for aggregated data, a graph database is optimized for highly connected data.
 
-.. _Neo4J: http://neo4j.org/
+.. _Neo4j: http://neo4j.org/

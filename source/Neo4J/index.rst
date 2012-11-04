@@ -1,4 +1,4 @@
-Neo4J
+Neo4j
 =====
 
 Contents:
