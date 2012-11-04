@@ -9,4 +9,5 @@ Contents:
    Overview.rst
    DataModel.rst
    Installation.rst
+   Create.rst
 
