@@ -11,4 +11,5 @@ Contents:
    Installation.rst
    Create.rst
    Update.rst
+   Read.rst
 
