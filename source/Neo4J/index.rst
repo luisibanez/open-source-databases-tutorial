@@ -10,4 +10,5 @@ Contents:
    DataModel.rst
    Installation.rst
    Create.rst
+   Update.rst
 
