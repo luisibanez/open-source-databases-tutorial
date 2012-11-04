@@ -8,12 +8,15 @@ Graph
 
 .. image:: ../../images/Neo4j-DataModel.svg
 
-* A Graph contains Nodes and Relationships
-* Nodes have Properties
-* Relationships organize the graph
-* Relationships have Properties
-* Queries are done by Traversing the Graph navigating from one Node to another.
-* Indexes look-up Nodes or Relationships
+* A Graph contains `Nodes`_ and `Relationships`_.
+* `Nodes`_ have `Properties`_.
+* `Relationships`_ organize the graph.
+* `Relationships`_ have `Properties`_.
+* `Relationsihps`_ are directed links between nodes.
+* `Properties`_ are key-value pairs where the key is a string.
+* The values of `Properties`_ in `Neo4J`_ can have one of several `Types`_
+* Queries are done by `Traversing`_ the Graph navigating from one Node to another along a `Path`_.
+* Indexes look-up `Nodes`_ or `Relationships`_.
 
 Comparison
 ----------
@@ -41,3 +44,10 @@ Comparison
 .. _elaborates a Key-Value store: http://docs.neo4j.org/chunked/stable/tutorial-comparing-models.html#_a_graph_database_elaborates_a_key_value_store
 .. _creates relationsips in Column-Family: http://docs.neo4j.org/chunked/stable/tutorial-comparing-models.html#_a_graph_database_relates_column_family
 .. _transforms a RDBMS: http://docs.neo4j.org/chunked/stable/tutorial-comparing-models.html#_a_graph_database_transforms_a_rdbms
+.. _Nodes: http://docs.neo4j.org/chunked/stable/graphdb-neo4j-nodes.html
+.. _Relationships: http://docs.neo4j.org/chunked/stable/graphdb-neo4j-relationships.html
+.. _Properties: http://docs.neo4j.org/chunked/stable/graphdb-neo4j-properties.html
+.. _Path: http://docs.neo4j.org/chunked/stable/graphdb-neo4j-paths.html
+.. _Traversing: http://docs.neo4j.org/chunked/stable/graphdb-neo4j-traversal.html
+.. _Types: http://docs.neo4j.org/chunked/stable/graphdb-neo4j-properties.html
+
