@@ -56,7 +56,7 @@ For example
 
   db.movies.update(
        { title: "The Matrix" },
-       { $set : { "year": 2000 } }
+       { $set : { year: 2000 } }
     )
 
 Here we are selecting the documents corresponding to movies whose title matches "The Matrix", and then we are replacing their "year" field with the value "2000".
@@ -129,12 +129,13 @@ the server by using the command:
 
 ::
 
-     scp  insertOneMovie.js  username@hostname
+     scp  insertOneMovie.js  username@hostname:
 
 Where:
 
 * "username" should be your actual username in that server
 * "hostname" should be your actual name of that server
+* Note the use of the colon symbol ":" at the end of the server name
 
 Finally, we can then use the command in the server:
 
