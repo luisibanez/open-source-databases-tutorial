@@ -4,18 +4,19 @@ Overview
 .. image:: ../../images/GTMLogo.jpg
    :scale: 200 %
 
-`GT.M`_ is a database engine with scalability proven in the largest real-time
-core processing systems in production at financial institutions worldwide, as
-well as in large, well known healthcare institutions.
+`GT.M`_ is a hierarchical, schema-free database with high scalability.
+
+It is commonly used Financial and Healthcare applications.
 
 It is important to distinguish between:
 
 * The `M Programming Language`_
 * The `M Database`_
 
-They tend to be used together, but they do not have to.
+The language and the database tend to be used together, but they do not have
+to.
 
-It is possible to use the M database from other programming languages.
+It is possible to use the `M Database`_ from other programming languages.
 
 Here we focused on M as a Database.
 
@@ -24,8 +25,10 @@ Main Features
 
 The main features of M are:
 
+* It represents a hierarchical (tree) data structure
 * Supports full Atomic, Consistent, Isolated and Durable (ACID) transactions
 * Is substantially faster for transaction processing than traditional relational databases
+* Automatic sorting is done during insertion
 * Imposes no restrictions on the application schema
 
  * The schema is entirely implemented and enforced by the application
