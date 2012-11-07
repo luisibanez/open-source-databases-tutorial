@@ -159,7 +159,7 @@ we get a more interesting sequence
 
 Here we go through three relationships.
 
-This is easier to visualiza if we look back at our `Data Browser`_ page
+This is easier to visualize if we look back at our `Data Browser`_ page
 
 
 .. image:: ../../images/Neo4jDBDataConsole09.png
