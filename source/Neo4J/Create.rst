@@ -180,6 +180,72 @@ interface, we can see the Graph taking shape
 .. image:: ../../images/Neo4jDBDataConsole06.png
    :scale: 100 %
 
+
+Graphics Style
+~~~~~~~~~~~~~~
+
+You would have noticed that the graphic display is very useful, but it uses the Node Id numbers as labels, forcing us to remember what node is what.
+
+We can improve this graphic display by customizing the labels.
+
+* Click in the "Style"  button on the upper right (the one with a wrench icon).
+
+.. image:: ../../images/Neo4jDataBrowser01.png
+   :scale: 100 %
+
+* A menu will appear
+* Select "New Style" button at the bottom of that menu
+* A new page will be presented, where you can customize the style
+* Enter a name for your new style in the upper left text field
+* Edit the first style rule
+
+ * Click in the "Add Filter" button
+ * Write in the "where property" box, the text : "name"
+ * In the "Label" box on the right replace "{id}" with {id}:{name}
+ * What this will do is that, in the nodes that have a "name" property, the data browser will use as labels the combination of node id and the name of the node.
+
+.. image:: ../../images/Neo4jDataBrowser02.png
+   :scale: 100 %
+
+* Save the style.
+
+ * This will return you to the Data Browser and now you should see some nodes labeled by name.
+ * You will notice that other nodes do still have only a number as label. These are nodes that do not have "name" as a property. Let's add a style rule for these other nodes.
+
+* Click again in the "Style" button
+
+ * Click on the "Edit" button of the style that we just created
+
+
+.. image:: ../../images/Neo4jDataBrowser03.png
+   :scale: 100 %
+
+* Click on the "Add Style" button on the bottom left of the page
+
+.. image:: ../../images/Neo4jDataBrowser04.png
+   :scale: 100 %
+
+* Click in the "Add Filter" button
+* Write in the "where property" box, the text : "title"
+* In the "Label" box on the right replace "{id}" with {id}:{title}
+* What this will do is that, in the nodes that have a "title" property, the data browser will use as labels the combination of node id and the title of the node.
+
+.. image:: ../../images/Neo4jDataBrowser05.png
+   :scale: 100 %
+
+* Save the style.
+
+ * This will return you to the Data Browser.
+ * Now you should see some nodes labeled by name and some labeled by title.
+
+
+.. image:: ../../images/Neo4jDataBrowser06.png
+   :scale: 100 %
+
+* Continue customizing the style until you have a display where you clearly can tell which node is which entity.
+
+
+
 Exercise
 ~~~~~~~~
 
