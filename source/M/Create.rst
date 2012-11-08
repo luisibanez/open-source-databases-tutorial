@@ -72,4 +72,32 @@ the system will reply with:
   %GDE-I-GDCREATE, Creating Global Directory file
         /data/gtm/database.gld
 
+Now we invoke the "mupip" command to create the database
+
+::
+
+  $gtm_dist/mupip create
+
+The system will respond with
+
+::
+
+   Created file /data/gtm/database.dat
+
+and now we set the size of the indexing keys
+
+::
+
+   $gtm_dist/dse change -f -key_max=1023 -rec=4096
+
+This will return
+
+::
+
+   File    /data/gtm/database.dat
+   Region  DEFAULT
+
+
+
 At this point our database is set up and ready to be populated and used.
+
