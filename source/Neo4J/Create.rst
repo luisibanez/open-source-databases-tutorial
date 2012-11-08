@@ -249,9 +249,15 @@ We can improve this graphic display by customizing the labels.
 Exercise
 ~~~~~~~~
 
-Proceed to add the directors of your favorite movies and connect them to the
-respective movie nodes. Remeber not to duplicate directors, and to use always
-the relationship type "DIRECTED".
+* Proceed to add Actors as Nodes (using only a "Name" property
+
+ * Add relationships between Actors an the Movies they were in.
+ * Do this with the relationship type "ACTED_IN".
+
+* Proceed to add the directors of your favorite movies
+
+ * Add relationships to the movies they directed.
+ * Do this with the relationship type "DIRECTED".
 
 
 .. _curl: http://en.wikipedia.org/wiki/CURL
