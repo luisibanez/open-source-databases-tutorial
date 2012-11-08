@@ -41,6 +41,9 @@ Then proceed to decompress te file with the command
 This will extract of the files of the distribution insde of the gtm_V55000 directory.
 
 
+Configure
+---------
+
 Now we can proceed to configure and install GT.M
 
 Type
@@ -167,7 +170,5 @@ We reply with "y" for yes, and the script will terminate.
 This concludes the installation of the GT.M database engine.
 
 
-Environment
------------
 .. _V5.5-000: http://sourceforge.net/projects/fis-gtm/files/GT.M-amd64-Linux/V5.5-000/
 .. _Download V5.5-000: http://sourceforge.net/projects/fis-gtm/files/GT.M-amd64-Linux/V5.5-000/gtm_V55000_linux_x8664_pro.tar.gz/download

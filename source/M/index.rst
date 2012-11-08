@@ -9,6 +9,7 @@ Contents:
    Overview.rst
    DataModel.rst
    Installation.rst
+   Create.rst
    WhoUsesIt.rst
    References.rst
 

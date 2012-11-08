@@ -1,0 +1,51 @@
+Create
+======
+
+Database
+--------
+
+GT.M takes advantage of the operating system infrastructure when creating
+databases.
+
+We essentially provide a filename to indicate where the database will be
+stored, and in the Linux environment point to the location of that file.
+
+Since GT.M also provides the M scripting language, we must also point out in an
+environment variable the directories where we anticipate to write M scripts.
+
+To define the location of the database first we create a directory to host it:
+
+::
+
+   sudo mkdir -p /data/gtm/
+
+Then we declare the location in the environment variable "gtmgbldir".
+
+This is the variable that the GT.M engine will check for, when looking for the
+database to access.
+
+::
+
+   export gtmgbldir =/data/gtm/database
+
+We now also create a directory for routines
+
+::
+
+   sudo mkdir -p /data/gtm/r
+
+and declare the location of GT.M routines in the variable "gtmroutines"
+
+::
+
+   export gtmroutines="/data/gtm/r /opt/gtm"
+
+
+Then we run the GT.M Global Directory Editor (GDE) with the command
+
+::
+
+    mumps -r GDE
+
+
+
