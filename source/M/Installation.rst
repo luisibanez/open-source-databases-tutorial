@@ -167,8 +167,38 @@ Finally, the script will reply with
 
 We reply with "y" for yes, and the script will terminate.
 
+
+Environment
+~~~~~~~~~~~
+
+Define in the environment where GT.M was installed
+
+::
+
+  export gtm_dist=/opt/gtm
+
+Source settings from the gtmprofile file by doing
+
+::
+
+   source $gtm_dist/gtmprofile
+
+
 This concludes the installation of the GT.M database engine.
 
+
+Users
+-----
+
+Linux users who are expected to use the GT.M database, must be added to the group "bin".
+
+This can be done with the command
+
+::
+
+    sudo adduser  username   bin
+
+where "username" must be replaced with the actual name of the user in Linux.
 
 .. _V5.5-000: http://sourceforge.net/projects/fis-gtm/files/GT.M-amd64-Linux/V5.5-000/
 .. _Download V5.5-000: http://sourceforge.net/projects/fis-gtm/files/GT.M-amd64-Linux/V5.5-000/gtm_V55000_linux_x8664_pro.tar.gz/download

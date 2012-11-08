@@ -48,4 +48,28 @@ Then we run the GT.M Global Directory Editor (GDE) with the command
     mumps -r GDE
 
 
+It should respond with
 
+::
+
+  %GDE-I-GDUSEDEFS, Using defaults for Global Directory
+          /data/gtm/database.gld
+
+
+In the GDE> prompt type the following, in order to set the default database.
+
+::
+
+   change -s DEFAULT -f=/data/gtm/database
+   exit
+
+the system will reply with:
+
+::
+
+  %GDE-I-VERIFY, Verification OK
+
+  %GDE-I-GDCREATE, Creating Global Directory file
+        /data/gtm/database.gld
+
+At this point our database is set up and ready to be populated and used.
