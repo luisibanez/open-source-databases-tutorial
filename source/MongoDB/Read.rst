@@ -9,7 +9,7 @@ The simplest way to retrieve data from a `MongoDB`_ collection is to use the
 
 ::
 
-   db.movies.find() hiiiii
+   db.movies.find()
 
 When called without any arguments it will retrieve the entire content of the
 collection (you may not want to do that in a large collection...)
