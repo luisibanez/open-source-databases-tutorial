@@ -25,7 +25,7 @@ Windows
 
 Follow instructions in the `Windows Installation`_ page.
 
-
+Hiroshi is here.
 
 .. _Installation Page: http://docs.mongodb.org/manual/installation/
 .. _MongoDB: http://www.mongodb.org/
