@@ -113,6 +113,4 @@ to use a particular database, we take advantage of the use command
 .. _database: http://www.mongodb.org/display/DOCS/Databases
 .. _collection: http://www.mongodb.org/display/DOCS/Collections
 
-::
 
-   The workshop is boooring!!! :)
