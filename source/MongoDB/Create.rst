@@ -112,3 +112,7 @@ to use a particular database, we take advantage of the use command
 .. _insert: http://www.mongodb.org/display/DOCS/Overview+-+The+MongoDB+Interactive+Shell#Overview-TheMongoDBInteractiveShell-Inserting  
 .. _database: http://www.mongodb.org/display/DOCS/Databases
 .. _collection: http://www.mongodb.org/display/DOCS/Collections
+
+::
+
+   The workshop is boooring!!! :)
