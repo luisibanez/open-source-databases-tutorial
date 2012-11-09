@@ -19,7 +19,7 @@ JSON
 The following is an example of how `JSON`_ could be used for representing data
 about Movies
 
-::
+:
 
   {
   title: "Forrest Gump",
@@ -34,9 +34,9 @@ and
 ::
 
   {
-  title: "The Matrix",
+  title: The Matrix,
   year: 1999,
-  directors: [ "Andy Wachowski", "Lana Wachowski" ],
+  directors: [ "Andy Wachowski", "Lana Wachowski" \,
   writers: [ "Andy Wachowski", "Lana Wachowski" ],
   stars: [ "Keanu Reeves", "Laurence Fishburne", "Carrie-Anne moss"]
   }
