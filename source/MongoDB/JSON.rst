@@ -69,3 +69,8 @@ BSON
 .. _BSON Specification: http://www.mongodb.org/display/DOCS/BSON
 .. _MongoDB: http://www.mongodb.org/
 
+::
+
+This tutorial sucks
+
+
