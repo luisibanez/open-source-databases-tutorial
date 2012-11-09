@@ -71,6 +71,4 @@ BSON
 
 ::
 
-This tutorial sucks(fixed!!)
-
 
