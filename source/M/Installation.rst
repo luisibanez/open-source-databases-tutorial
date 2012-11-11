@@ -171,7 +171,21 @@ We reply with "y" for yes, and the script will terminate.
 Environment
 ~~~~~~~~~~~
 
-Define in the environment where GT.M was installed
+GT.M relies on environment variables to know what database to access, and what
+particular M script files to use. 
+
+By manipulating several environment variables, users can point to a particular
+database, and use a particular set of M script files.
+
+The main environment variables to be set are:
+
+* gtm_dist
+* gtmgbldir
+* gtmroutines
+
+Here below we describe how they should be set.
+
+Define in the environment variable "gtm_dist", the path where GT.M was installed
 
 ::
 
@@ -183,22 +197,46 @@ Source settings from the gtmprofile file by doing
 
    source $gtm_dist/gtmprofile
 
+The location where the actual database will be stored must be placed in the
+environment variable "gtmgbldir" as:
+
+::
+
+   export gtmgbldir="/data/gtm/database"
+
+and the locations where M script files can be found, must be placed in the
+environment variable "gtmroutines", for example:
+
+::
+
+    export gtmroutines="/data/gtm/o(/data/gtm/r) $gtm_dist/ /opt/gtm/libgtmshr.so /opt/gtm/libgtmutil.so"
+
+Finally, it is convenient, but not required, to define an alias for the command
+line executable of the database shell interpreter
+
+::
+
+    alias gtm='$gtm_dist/mumps -dir'
+
+
+All this, will typically be done in the ".bashrc" configuration file of every
+user who needs to access the database. The combined set of lines, in a .bashrc
+file, will look like the following block:
+
+::
+
+   export gtm_dist=/opt/gtm
+   source $gtm_dist/gtmprofile
+   export gtmgbldir="/data/gtm/database"
+   export gtmroutines="/data/gtm/o(/data/gtm/r) $gtm_dist/ /opt/gtm/libgtmshr.so /opt/gtm/libgtmutil.so"
+   alias gtm='$gtm_dist/mumps -dir'
+
+
 
 This concludes the installation of the GT.M database engine.
 
 
-Users
------
 
-Linux users who are expected to use the GT.M database, must be added to the group "bin".
-
-This can be done with the command
-
-::
-
-    sudo adduser  username   bin
-
-where "username" must be replaced with the actual name of the user in Linux.
 
 .. _V5.5-000: http://sourceforge.net/projects/fis-gtm/files/GT.M-amd64-Linux/V5.5-000/
 .. _Download V5.5-000: http://sourceforge.net/projects/fis-gtm/files/GT.M-amd64-Linux/V5.5-000/gtm_V55000_linux_x8664_pro.tar.gz/download
