@@ -6,7 +6,12 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   Installation.rst
    Overview.rst
+   Installation.rst
+
+
+.. index::
+   pair: PostgreSQL; Overview
+   pair: PostgreSQL; Installation
 
 

@@ -9,3 +9,9 @@ Contents:
    Configuration.rst
    Loging.rst
 
+
+.. index::
+   pair: Server; Configuration
+   pair: Server; Loging
+
+

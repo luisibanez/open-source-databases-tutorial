@@ -27,6 +27,16 @@ Contents:
    Riak/index.rst
    Server/index.rst
 
+.. index::
+   single: CouchDB
+   single: HBase
+   single: M
+   single: MongoDB
+   single: Neo4J
+   single: PostgreSQL
+   single: Redis
+   single: Riak
+   single: Server
 
 
 Indices and tables

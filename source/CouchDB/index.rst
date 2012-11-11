@@ -8,3 +8,5 @@ Contents:
 
    Installation.rst
 
+.. index::
+   pair: CouchDB; Installation

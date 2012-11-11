@@ -13,3 +13,11 @@ Contents:
    WhoUsesIt.rst
    References.rst
 
+.. index::
+   pair: M; Overview
+   pair: M; DataModel
+   pair: M; Installation
+   pair: M; Create
+   pair: M; WhoUsesIt
+   pair: M; References
+

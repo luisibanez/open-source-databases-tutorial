@@ -8,3 +8,6 @@ Contents:
 
    Installation.rst
 
+.. index::
+   pair: Redis; Installation
+

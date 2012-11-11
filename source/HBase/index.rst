@@ -8,3 +8,7 @@ Contents:
 
    Installation.rst
 
+.. index::
+   pair: HBase; Installation
+
+

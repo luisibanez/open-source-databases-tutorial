@@ -22,3 +22,20 @@ Contents:
    WhoUsesIt.rst
    Links.rst
 
+.. index::
+   pair: MongoDB; Overview
+   pair: MongoDB; DataModel
+   pair: MongoDB; JSON
+   pair: MongoDB; Installation
+   pair: MongoDB; Create
+   pair: MongoDB; Update
+   pair: MongoDB; Nesting
+   pair: MongoDB; Read
+   pair: MongoDB; Remove
+   pair: MongoDB; SchemaFree
+   pair: MongoDB; DuplicateEntries
+   pair: MongoDB; Sharding
+   pair: MongoDB; QueryInconsistency
+   pair: MongoDB; WhoUsesIt
+   pair: MongoDB; Links
+
