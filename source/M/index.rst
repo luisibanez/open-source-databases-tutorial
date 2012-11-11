@@ -10,6 +10,7 @@ Contents:
    DataModel.rst
    Installation.rst
    Create.rst
+   Update.rst
    WhoUsesIt.rst
    References.rst
 
@@ -18,6 +19,7 @@ Contents:
    pair: M; DataModel
    pair: M; Installation
    pair: M; Create
+   pair: M; Update
    pair: M; WhoUsesIt
    pair: M; References
 
