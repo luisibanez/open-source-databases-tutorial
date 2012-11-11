@@ -167,7 +167,8 @@ They could be used in the very traditional form of integer numbers used as indic
 
 Where the "set" command is use to set the values of the variables.
 
-In order to see the result of these set commands we can use
+In order to see the result of these set commands we can use the `zwrite`_
+command:
 
 ::
 
@@ -198,7 +199,7 @@ For example, we could have rather organized the array as
    set ^beatle("Ringo")=""
    set ^beatle("George")=""
 
-and now zwrite will show:
+and now `zwrite`_ will show:
 
 ::
 
@@ -268,3 +269,4 @@ Beatle.
 .. _gtmroutines: http://tinco.pair.com/bhaskar/gtm/doc/books/pg/UNIX_manual/ch03s02.html#gtmroutines
 .. _Global Variables: http://tinco.pair.com/bhaskar/gtm/doc/books/pg/UNIX_manual/ch05s03.html#Global_Var_Resource_Name_Env
 .. _Local Variables: http://tinco.pair.com/bhaskar/gtm/doc/books/pg/UNIX_manual/ch05s03.html#Local_Variables
+.. _zwrite: http://tinco.pair.com/bhaskar/gtm/doc/books/pg/UNIX_manual/ch06s49.html
