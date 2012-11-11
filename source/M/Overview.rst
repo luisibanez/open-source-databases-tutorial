@@ -4,9 +4,9 @@ Overview
 .. image:: ../../images/GTMLogo.jpg
    :scale: 200 %
 
-`GT.M`_ is a hierarchical, schema-free database with high scalability.
+`GT.M`_ is a hierarchical, schema-free, highly scalable database.
 
-It is commonly used Financial and Healthcare applications.
+It is commonly used in Financial and Healthcare applications.
 
 It is important to distinguish between:
 
@@ -18,20 +18,20 @@ to.
 
 It is possible to use the `M Database`_ from other programming languages.
 
-Here we focused on M as a Database.
+Here we focus on M as a Database.
 
 Main Features
 -------------
 
 The main features of M are:
 
-* It represents a hierarchical (tree) data structure
-* Supports full Atomic, Consistent, Isolated and Durable (ACID) transactions
-* Is substantially faster for transaction processing than traditional relational databases
-* Automatic sorting is done during insertion
-* Imposes no restrictions on the application schema
+* It represents a hierarchical (tree) data structure.
+* Supports full Atomic, Consistent, Isolated and Durable (ACID) transactions.
+* Is substantially faster for transaction processing than traditional relational databases.
+* Sorts entries automatically as soon as they are inserted.
+* Imposes no restrictions on the application schema.
 
- * The schema is entirely implemented and enforced by the application
+ * The schema is entirely implemented and enforced by the application.
  * Just as it is with other “schema-free” or “NoSQL” key-value databases.
 
 
@@ -42,13 +42,13 @@ Here are the some of the features that may lead you to use M:
 
 * Sparse data
 
- * When your records contains highly diverse fields
- * When certain fields will be missing for a large number of records
+ * When your records contains highly diverse fields.
+ * When certain fields will be missing for a large number of records.
 
 * Unstructured data
 
- * When the data itself is not fitting a specific schema, and/or
- * When the schema changes overtime. (e.g. due to regulations).
+ * When the data itself is not fitting a specific schema.
+ * When the schema changes overtime. (for example, due to government regulations).
 
 * High availability
 
