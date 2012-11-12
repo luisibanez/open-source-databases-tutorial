@@ -11,6 +11,7 @@ Contents:
    Installation.rst
    Create.rst
    Update.rst
+   Read.rst
    Remove.rst
    WhoUsesIt.rst
    References.rst
@@ -21,6 +22,7 @@ Contents:
    pair: M; Installation
    pair: M; Create
    pair: M; Update
+   pair: M; Read
    pair: M; Remove
    pair: M; WhoUsesIt
    pair: M; References
