@@ -136,7 +136,7 @@ Local variables only live for the duration of a session in the M interpreter.
 Global variables are stored in the database, and therefore they are
 
 * persistent across interpreter sessions
-* shared across uses who have access to the database
+* shared across users who have access to the database
 
 To indicate that a variable is *Global*, we just need to use the character "^"
 at the beginning of the name.

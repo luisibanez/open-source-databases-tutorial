@@ -23,7 +23,7 @@ For example, the following could be the method for storing data for bank transac
 .. image:: ../../images/HierarchicalDataModel.svg
    :scale: 50 %
 
-* Note that we start with an aggredated concept "The Bank".
+* Note that we start with an aggregated concept "The Bank".
 * Banks can have multiple branches (offices in different cities and neighborhoods).
 * Every branch has multiple customers
 * A customer may have Checking accounts and Saving accounts (multiple of each).
@@ -42,7 +42,7 @@ than to ask for:
 
 ::
 
-  Get all the witdrawals maded in the Entire bank in a range of dates
+  Get all the witdrawals made in the Entire bank in a range of dates
 
 Both queries are posible, but the first one will be much more efficient in this
 tree arrangement, that it would be in a Relational Database, where the

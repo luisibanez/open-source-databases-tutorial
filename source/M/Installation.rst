@@ -32,13 +32,13 @@ Enter that directory
    cd gtm_V55000
 
 
-Then proceed to decompress te file with the command
+Then proceed to decompress the file with the command
 
 ::
 
     tar xzvf ../gtm_V55000_linux_x8664_pro.tar.gz
 
-This will extract of the files of the distribution insde of the gtm_V55000 directory.
+This will extract of the files of the distribution inside of the gtm_V55000 directory.
 
 
 Configure
