@@ -35,7 +35,23 @@ that now will return:
    ^movies("The Matrix","actors","Laurence Fishburne")=""
    ^movies("The Matrix","year",1999)=""
 
-To remove the actors we can use the command
+We can remove also a single child. For example, a specific actor:
+
+::
+
+   kill ^movies("The Matrix","actors","Laurence Fishburne")
+
+after which `zwrite`_ will return
+
+::
+
+   ^movies("The Matrix")=""
+   ^movies("The Matrix","actors","Carrie-Anne Moss")=""
+   ^movies("The Matrix","actors","Keanu Reeves")=""
+   ^movies("The Matrix","year",1999)=""
+
+
+To remove all the actors we can use the command
 
 ::
 
@@ -49,7 +65,7 @@ this will delete the "actors" branch and its three subbranches
    ^movies("The Matrix","actors","Keanu Reeves")
    ^movies("The Matrix","actors","Laurence Fishburne")
 
-This, again, can be veriried with the `zwrite`_ command:
+This, again, can be verified with the `zwrite`_ command:
 
 ::
 
