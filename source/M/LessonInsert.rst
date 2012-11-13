@@ -1,13 +1,21 @@
 Insert Lesson
 =============
 
+Pre-Requisites
+--------------
+
 This lesson expects that you read first the sections
 
 * Overview
 * Data Model
+* Update
 
+The hands-on activity is expected to be done in this Lesson. Therefore, as you read the sections above, simply focus on understanding the concepts.
 
-Inserting new data into the tree structue of the database is done by simply using the **set** command.
+Insert Movie
+------------
+
+Inserting new data into the tree structue of the database is done by simply using the `set`_ command.
 
 First, we invoke the `GT.M`_ command shell interpreter by typing
 
@@ -27,79 +35,33 @@ In this prompt we can write the following command
 
    set ^movies("The Matrix")=""
 
-and then, proceed to populat its information.
+and then, proceed to populate its information.
 
-For example, adding the actors
-
-::
-
-   set ^movies("The Matrix","actors","Keanu Reeves")=""
-   set ^movies("The Matrix","actors","Laurence Fishburne")=""
-   set ^movies("The Matrix","actors","Carrie-Anne Moss")=""
-
-Notice that when you create a sequence of indices, you don't need to create the
-intermediary branches that lead to the end. For example, in the lines above, we
-did not created first the "actors" branch. Instead, that branch section was
-created as a secondary effect of creating the longer branch.
-
-We can do the same for the "directors".
+For example
 
 ::
 
-   set ^movies("The Matrix","directors","Andy Wachowski")=""
-   set ^movies("The Matrix","directors","Lana Wachowski")=""
-
-and the year
-
-::
-
-   set ^movies("The Matrix","year","1999")=""
-
-
-To see the result so far, we can use the command
-
-::
-
-   zwrite ^movies("The Matrix",*)
-
-that will respond with
-
-::
-
-   ^movies("The Matrix")=""
-   ^movies("The Matrix","actors","Carrie-Anne moss")=""
-   ^movies("The Matrix","actors","Keanu Reeves")=""
-   ^movies("The Matrix","actors","Laurence Fishburne")=""
-   ^movies("The Matrix","directors","Andy Wachowski")=""
-   ^movies("The Matrix","directors","Lana Wachowski")=""
-   ^movies("The Matrix","year",1999)=""
+  set ^movies("The Matrix")=""
+  set ^movies("The Matrix","actors","Carrie-Anne Moss")=""
+  set ^movies("The Matrix","actors","Keanu Reeves")=""
+  set ^movies("The Matrix","actors","Laurence Fishburne")=""
+  set ^movies("The Matrix","directors","Andy Wachowski")=""
+  set ^movies("The Matrix","directors","Lana Wachowski")=""
+  set ^movies("The Matrix","year",1999)=""
 
 
-and if we want to focus on the directors, we could be more specific and use the command
-
-::
-
-   zwrite ^movies("The Matrix","directors",*)
-
-that will respond with
-
-::
-
-   ^movies("The Matrix","directors","Andy Wachowski")=""
-   ^movies("The Matrix","directors","Lana Wachowski")=""
- 
-Note the use of the "*" character to indicate to the `zwrite`_ command that we
-want to see all the subsequent branches of the tree.
+Insert Actor
+------------
 
 A similar exercise can be made for data related to Actors, by creating an ^actors tree and populating it with data such as:
 
 ::
 
-   ^actors("Keanu Reeves")=""
-   ^actors("Keanu Reeves","birth","date","1964-09-02")=""
-   ^actors("Keanu Reeves","birth","place","city","Beirut")=""
-   ^actors("Keanu Reeves","birth","place","country","Lebanon")=""
-   ^actors("Keanu Reeves","nationality","Canadian")=""
+  set ^actors("Keanu Reeves")=""
+  set ^actors("Keanu Reeves","birth","date","1964-09-02")=""
+  set ^actors("Keanu Reeves","birth","place","city","Beirut")=""
+  set ^actors("Keanu Reeves","birth","place","country","Lebanon")=""
+  set ^actors("Keanu Reeves","nationality","Canadian")=""
 
 
 Exercise
