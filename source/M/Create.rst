@@ -78,11 +78,14 @@ the system will reply with:
   %GDE-I-GDCREATE, Creating Global Directory file
         /data/gtm/database.gld
 
-Now we invoke the "mupip" command to create the database
+Now we invoke the `mupip`_ command to create the database
 
 ::
 
   $gtm_dist/mupip create
+
+Note that no arguments are needed for `mupip create`_ because we just defined
+what database should be used by default.
 
 The system will respond with
 
@@ -270,3 +273,5 @@ Beatle.
 .. _Global Variables: http://tinco.pair.com/bhaskar/gtm/doc/books/pg/UNIX_manual/ch05s03.html#Global_Var_Resource_Name_Env
 .. _Local Variables: http://tinco.pair.com/bhaskar/gtm/doc/books/pg/UNIX_manual/ch05s03.html#Local_Variables
 .. _zwrite: http://tinco.pair.com/bhaskar/gtm/doc/books/pg/UNIX_manual/ch06s49.html
+.. _mupip: http://tinco.pair.com/bhaskar/gtm/doc/books/ao/UNIX_manual/ch01s06.html#id545055
+.. _mupip create: http://tinco.pair.com/bhaskar/gtm/doc/books/ao/UNIX_manual/gdm.html#mup_create
