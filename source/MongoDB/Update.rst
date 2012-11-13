@@ -23,7 +23,7 @@ The following command inserts a new entry in our "movies" `collection`_ in the
           year: 1999,
           directors: [ "Andy Wachowski", "Lana Wachowski" ],
           writers: [ "Andy Wachowski", "Lana Wachowski" ],
-          stars: [ "Keanu Reeves", "Laurence Fishburne", "Carrie-Anne moss"] 
+          stars: [ "Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"] 
         }
       )
 

@@ -32,7 +32,7 @@ For example, adding the actors
 
    set ^movies("The Matrix","actors","Keanu Reeves")=""
    set ^movies("The Matrix","actors","Laurence Fishburne")=""
-   set ^movies("The Matrix","actors","Carrie-Anne moss")=""
+   set ^movies("The Matrix","actors","Carrie-Anne Moss")=""
 
 Notice that when you create a sequence of indices, you don't need to create the
 intermediary branches that lead to the end. For example, in the lines above, we
@@ -64,7 +64,7 @@ that will respond with
 ::
 
    ^movies("The Matrix")=""
-   ^movies("The Matrix","actors","Carrie-Anne moss")=""
+   ^movies("The Matrix","actors","Carrie-Anne Moss")=""
    ^movies("The Matrix","actors","Keanu Reeves")=""
    ^movies("The Matrix","actors","Laurence Fishburne")=""
    ^movies("The Matrix","directors","Andy Wachowski")=""

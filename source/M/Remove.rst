@@ -30,7 +30,7 @@ that now will return:
 ::
 
    ^movies("The Matrix")=""
-   ^movies("The Matrix","actors","Carrie-Anne moss")=""
+   ^movies("The Matrix","actors","Carrie-Anne Moss")=""
    ^movies("The Matrix","actors","Keanu Reeves")=""
    ^movies("The Matrix","actors","Laurence Fishburne")=""
    ^movies("The Matrix","year",1999)=""
@@ -45,7 +45,7 @@ this will delete the "actors" branch and its three subbranches
 
 ::
 
-   ^movies("The Matrix","actors","Carrie-Anne moss")
+   ^movies("The Matrix","actors","Carrie-Anne Moss")
    ^movies("The Matrix","actors","Keanu Reeves")
    ^movies("The Matrix","actors","Laurence Fishburne")
 
