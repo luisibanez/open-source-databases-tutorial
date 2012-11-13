@@ -15,6 +15,7 @@ Contents:
    Remove.rst
    WhoUsesIt.rst
    References.rst
+   Lessons.rst
 
 .. index::
    pair: M; Overview
@@ -26,4 +27,5 @@ Contents:
    pair: M; Remove
    pair: M; WhoUsesIt
    pair: M; References
+   pair: M; Lessons
 
