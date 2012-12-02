@@ -21,6 +21,7 @@ Contents:
    QueryInconsistency.rst
    WhoUsesIt.rst
    Links.rst
+   Lessons.rst
 
 .. index::
    pair: MongoDB; Overview
@@ -38,4 +39,5 @@ Contents:
    pair: MongoDB; QueryInconsistency
    pair: MongoDB; WhoUsesIt
    pair: MongoDB; Links
+   pair: MongoDB; Lessons
 
