@@ -18,6 +18,7 @@ Contents:
    :maxdepth: 2
 
    CouchDB/index.rst
+   FileMan/index.rst
    HBase/index.rst
    M/index.rst
    MongoDB/index.rst
@@ -29,6 +30,7 @@ Contents:
 
 .. index::
    single: CouchDB
+   single: FileMan
    single: HBase
    single: M
    single: MongoDB
