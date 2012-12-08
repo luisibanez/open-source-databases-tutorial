@@ -14,6 +14,12 @@ Under `Ubuntu`_ and `Debian`_ you can install MongoDB by using the following com
 
    sudo aptitude install mongodb
 
+Create a default database
+
+::
+
+    mkdir -p /data/db
+
 
 Mac
 ---
