@@ -2,6 +2,6 @@
   title: "Pulp Fiction",
   year: 1994,
   director: "Quentin Tarantino",
-  writers: "Quentin Tarantino", "Roger Avary",
-  stars: [ "John Travolta", "Uma Thurman", "Samuel L. Jackson",
+  writers: ["Quentin Tarantino", "Roger Avary"],
+  stars: [ "John Travolta", "Uma Thurman", "Samuel L. Jackson"]
 }
