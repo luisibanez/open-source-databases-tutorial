@@ -26,7 +26,7 @@ database to access.
 
 ::
 
-   export gtmgbldir =/data/gtm/database
+   export gtmgbldir=/data/gtm/database
 
 We now also create a directory for routines (scripts in `M Language`_).
 
@@ -34,11 +34,17 @@ We now also create a directory for routines (scripts in `M Language`_).
 
    sudo mkdir -p /data/gtm/r
 
+as well as a directory for the object code compiled from the routines
+
+::
+
+   sudo mkdir -p /data/gtm/o
+
 and declare the location of GT.M routines in the variable "`gtmroutines`_"
 
 ::
 
-   export gtmroutines="/data/gtm/r /opt/gtm"
+   export gtmroutines="/data/gtm/o(/data/gtm/r) /opt/gtm/ /opt/gtm/libgtmshr.so /opt/gtm/libgtmutil.so"
 
 and it is expected the that "`gtm_dist`_" environment variable will be pointing
 to the directory were the GT.M database engine is located.
@@ -53,6 +59,7 @@ Then we run the GT.M Global Directory Editor (GDE) with the command
 
   $gtm_dist/mumps -r GDE
 
+Note: the first time that you do this, you may have to run this command as "root".
 
 It should respond with
 

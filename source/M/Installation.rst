@@ -9,36 +9,37 @@ GT.M can be installed in the following platforms
 Download
 --------
 
-Here we will be using GT.M version `V5.5-000`_.
+Here we will be using GT.M version `V6.0-001`_.
 
-Simply click in the link `Download V5.5-000`_.
+Simply click in the link `Download V6.0-001`_.
 
-This will download a file called
+This will download a file (for a 64bits architecture) called
 
 ::
 
-    gtm_V55000_linux_x8664_pro.tar.gz
+    gtm_V60001_linux_x8664_pro.tar.gz
 
 Create a directory for the files to be extracted
 
 ::
 
-   mkdir gtm_V55000
+   mkdir gtm_V60001
 
 Enter that directory
 
 ::
 
-   cd gtm_V55000
+   cd gtm_V60001
 
 
 Then proceed to decompress the file with the command
 
 ::
 
-    tar xzvf ../gtm_V55000_linux_x8664_pro.tar.gz
+    tar xzvf ../gtm_V60001_linux_x8664_pro.tar.gz
 
-This will extract of the files of the distribution inside of the gtm_V55000 directory.
+This will extract of the files of the distribution inside of the gtm_V60001
+directory.
 
 
 Configure
@@ -172,7 +173,7 @@ Environment
 ~~~~~~~~~~~
 
 GT.M relies on environment variables to know what database to access, and what
-particular M script files to use. 
+particular M script files to use.
 
 By manipulating several environment variables, users can point to a particular
 database, and use a particular set of M script files.
@@ -238,5 +239,6 @@ This concludes the installation of the GT.M database engine.
 
 
 
-.. _V5.5-000: http://sourceforge.net/projects/fis-gtm/files/GT.M-amd64-Linux/V5.5-000/
-.. _Download V5.5-000: http://sourceforge.net/projects/fis-gtm/files/GT.M-amd64-Linux/V5.5-000/gtm_V55000_linux_x8664_pro.tar.gz/download
+.. _V6.0-001: http://sourceforge.net/projects/fis-gtm/files/GT.M-amd64-Linux/V6.0-001/
+.. _Download V6.0-001: http://sourceforge.net/projects/fis-gtm/files/GT.M-amd64-Linux/V6.0-001/gtm_V60001_linux_x8664_pro.tar.gz/download
+
