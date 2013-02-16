@@ -26,6 +26,8 @@ Contents:
    PostgreSQL/index.rst
    Redis/index.rst
    Riak/index.rst
+   RDF/index.rst
+   SPARQL/index.rst
    Server/index.rst
 
 .. index::
@@ -38,6 +40,8 @@ Contents:
    single: PostgreSQL
    single: Redis
    single: Riak
+   single: RDF
+   single: SPARQL
    single: Server
 
 
