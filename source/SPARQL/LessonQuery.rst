@@ -205,11 +205,60 @@ To do this use the ORDER BY clause
 * Apply this to your favorite artist
 * Sort the results by the name of the song instead of the date
 
+Query 08
+~~~~~~~~
+
+Restrict the results to songs released after "2001"
+
+To do this use the FILTER function
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+  PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+  SELECT DISTINCT ?song ?songdate WHERE {
+     ?song dbo:artist dbr:Diana_Krall .
+     ?song dbo:releaseDate ?songdate .
+     FILTER ( ?songdate > "2001"^^xsd:date )
+  }
 
 
-Exercises
----------
+* Return only songs released after 2004
+* Sort them by date
+* Limit the number of results to only five songs
 
-* Find how many movies are in the collection from before the year 2000
+
+Query 09
+~~~~~~~~
+
+Restrict the results to songs released after "2001" and before "2009".
+
+To do this use the FILTER function
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+  PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+  SELECT DISTINCT ?song ?songdate WHERE {
+     ?song dbo:artist dbr:Diana_Krall .
+     ?song dbo:releaseDate ?songdate .
+     FILTER ( ?songdate > "2001"^^xsd:date && ?songdate < "2009"^^xsd:date )
+  }
+
+
+* Return only songs released after 2003 and before 2005
+* Sort them by date
+* Limit the number of results to only five songs
+* Use the name of your favorite artist
+
+  * Experiment the range of dates to get the period of your favorite songs
+
+
+
+
 
 .. _Virtuoso SPARQL Query Editor: http://dbpedia.org/sparql
