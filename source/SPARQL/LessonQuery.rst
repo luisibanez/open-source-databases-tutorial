@@ -146,6 +146,65 @@ Use the LIMIT clause to restrict the number of returned values to 15 songs
 * Experiment with two other values of OFFSET
 
 
+Query 05
+~~~~~~~~
+
+We have been connecting the artist to the songs via the albums, but we could
+also query graph via the direct relationship between the songs and the artist.
+
+Try the following query
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+
+  SELECT DISTINCT ?song WHERE {
+     ?song dbo:artist dbr:Diana_Krall .
+  }
+
+* Compare the results of this query with the results we obtained when using the album as part of the Graph pattern
+
+
+Query 06
+~~~~~~~~
+
+Find the dates in which these songs were released by using the following graph pattern.
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+
+  SELECT DISTINCT ?song ?songdate WHERE {
+     ?song dbo:artist dbr:Diana_Krall .
+     ?song dbo:releaseDate ?songdate .
+  }
+
+* Apply this to your favorite artist
+
+Query 07
+~~~~~~~~
+
+Request the query to return the songs ordered by their release date.
+
+To do this use the ORDER BY clause
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+
+  SELECT DISTINCT ?song ?songdate WHERE {
+     ?song dbo:artist dbr:Diana_Krall .
+     ?song dbo:releaseDate ?songdate .
+  }
+
+  ORDER BY ?songdate
+
+* Apply this to your favorite artist
+* Sort the results by the name of the song instead of the date
+
 
 
 Exercises
