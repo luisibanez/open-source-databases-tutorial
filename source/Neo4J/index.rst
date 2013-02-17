@@ -13,6 +13,7 @@ Contents:
    Update.rst
    Read.rst
    WhoUsesIt.rst
+   Lessons.rst
 
 .. index::
    pair: Neo4j; Overview
@@ -22,5 +23,6 @@ Contents:
    pair: Neo4j; Update
    pair: Neo4j; Read
    pair: Neo4j; WhoUsesIt
+   pair: Neo4j; Lessons
 
 
