@@ -22,11 +22,13 @@ To start, open your Web Browser at the address of the `Virtuoso SPARQL Query Edi
 
         http://dbpedia.org/sparql
 
-We will also use in parallel the SNORQL Explorere
+We will also use in parallel the SNORQL Explorer
 
 ::
 
         http://dbpedia.org/snorql/
+
+to see the hyperlinks of the same type of searches
 
 
 Queries
@@ -59,10 +61,204 @@ and in the "Query Text" window, type:
   * This follows the format of the Wikipedia URLs
 
 
+Query 02
+~~~~~~~~
 
-Exercises
----------
+Add a second condition to retrieve all songs from the albums of these artist
 
-* Find how many movies are in the collection from before the year 2000
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+  PREFIX dbp: <http://dbpedia.org/property/>
+
+  SELECT ?song WHERE {
+     ?album dbo:artist dbr:Diana_Krall .
+     ?album dbp:title  ?song .
+  }
+
+
+Notice the addition of the prefix "dbp" pointing to the URI
+
+::
+
+    <http://dbpedia.org/property/>
+
+and how the variable "?album" is used internally to relate the Graph pattern
+between the artist and the songs.
+
+* Perform this query for two of your favorite artists
+
+  * Verify that your favorite songs appear in the results
+
+
+Query 03
+~~~~~~~~
+
+Note that in the previous query the results may have repeated songs, since some
+songs may have been published in multiple albums.
+
+Add the "DISTINCT" solution modified to the SELECT clause, in oder to eliminate
+repeated answers.
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+  PREFIX dbp: <http://dbpedia.org/property/>
+
+  SELECT DISTINCT ?song WHERE {
+     ?album dbo:artist dbr:Diana_Krall .
+     ?album dbp:title  ?song .
+  }
+
+
+* Apply this to your favorite artist
+
+  * Verify that no songs are repeated in the results.
+
+
+Query 04
+~~~~~~~~
+
+Try the search now with "Bob_Dylan".
+
+You will find that this artist have many songs.
+
+Use the LIMIT clause to restrict the number of returned values to 15 songs
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+  PREFIX dbp: <http://dbpedia.org/property/>
+
+  SELECT DISTINCT ?song WHERE {
+     ?album dbo:artist dbr:Bob_Dylan .
+     ?album dbp:title  ?song .
+  }
+
+  LIMIT 15
+
+
+* Below LIMIT, add the "OFFSET 5" clause to start the group of 15 songs in the fifth song
+* Experiment with two other values of LIMIT
+* Experiment with two other values of OFFSET
+
+
+Query 05
+~~~~~~~~
+
+We have been connecting the artist to the songs via the albums, but we could
+also query graph via the direct relationship between the songs and the artist.
+
+Try the following query
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+
+  SELECT DISTINCT ?song WHERE {
+     ?song dbo:artist dbr:Diana_Krall .
+  }
+
+* Compare the results of this query with the results we obtained when using the album as part of the Graph pattern
+
+
+Query 06
+~~~~~~~~
+
+Find the dates in which these songs were released by using the following graph pattern.
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+
+  SELECT DISTINCT ?song ?songdate WHERE {
+     ?song dbo:artist dbr:Diana_Krall .
+     ?song dbo:releaseDate ?songdate .
+  }
+
+* Apply this to your favorite artist
+
+Query 07
+~~~~~~~~
+
+Request the query to return the songs ordered by their release date.
+
+To do this use the ORDER BY clause
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+
+  SELECT DISTINCT ?song ?songdate WHERE {
+     ?song dbo:artist dbr:Diana_Krall .
+     ?song dbo:releaseDate ?songdate .
+  }
+
+  ORDER BY ?songdate
+
+* Apply this to your favorite artist
+* Sort the results by the name of the song instead of the date
+
+Query 08
+~~~~~~~~
+
+Restrict the results to songs released after "2001"
+
+To do this use the FILTER function
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+  PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+  SELECT DISTINCT ?song ?songdate WHERE {
+     ?song dbo:artist dbr:Diana_Krall .
+     ?song dbo:releaseDate ?songdate .
+     FILTER ( ?songdate > "2001"^^xsd:date )
+  }
+
+
+* Return only songs released after 2004
+* Sort them by date
+* Limit the number of results to only five songs
+
+
+Query 09
+~~~~~~~~
+
+Restrict the results to songs released after "2001" and before "2009".
+
+To do this use the FILTER function
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+  PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+  SELECT DISTINCT ?song ?songdate WHERE {
+     ?song dbo:artist dbr:Diana_Krall .
+     ?song dbo:releaseDate ?songdate .
+     FILTER ( ?songdate > "2001"^^xsd:date && ?songdate < "2009"^^xsd:date )
+  }
+
+
+* Return only songs released after 2003 and before 2005
+* Sort them by date
+* Limit the number of results to only five songs
+* Use the name of your favorite artist
+
+  * Experiment the range of dates to get the period of your favorite songs
+
+
+
+
 
 .. _Virtuoso SPARQL Query Editor: http://dbpedia.org/sparql
