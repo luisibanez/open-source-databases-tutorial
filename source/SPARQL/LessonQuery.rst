@@ -208,6 +208,168 @@ To do this use the ORDER BY clause
 Query 08
 ~~~~~~~~
 
+In some cases we may know the exact label name that has been associated with an
+URI. For example, the song
+
+* "Almost Blue"
+
+has a DBpedida resource
+
+::
+
+  <http://dbpedia.org/resource/Almost_Blue_(song)>
+
+and that resource has a human friendly label
+
+::
+
+   "Almost Blue (song)"
+
+that to further clarify that it is expressed in the English language, is written as
+
+::
+
+   "Almost Blue (song)"@en
+
+Why is it important to include the Language specification ?
+
+Let's consider the word "con", that in English can mean
+
+* A convict
+* The act or process of steering a vessel
+* The station or post of the person who steers a vessel
+* To learn or commit to memory
+* To study, peruse, or examine carefully
+* An argument or opinion against something
+* One who holds an opposing opinion or view
+
+While in French... well...
+it is an offensive word that can bring you in to a fight.
+
+It is therefore useful to differentiate
+
+* "con"@en
+* "con"@fr
+
+To indicate when we are referring to the word in English or the word in French.
+
+We can use these type of text specification to make a search that indicate the
+explicit name of a resource in a given language.
+
+::
+
+  PREFIX dbp: <http://dbpedia.org/property/>
+
+  SELECT DISTINCT ?album  WHERE {
+      ?album  dbp:title  "Stop This World"@en .
+  }
+
+
+Query 09
+~~~~~~~~
+
+The graph patterns indicated in triplets of
+
+* Subject
+* Predicate
+* Object
+
+are terminated with a "." symbol, as in
+
+::
+
+   ?song dbo:artist dbr:Diana_Krall .
+
+When two or more of such triplets have the same subject, they can be written in a more compact way using ";" as terminator.
+
+For example
+
+::
+
+     ?song dbo:artist dbr:Diana_Krall .
+     ?song dbo:releaseDate ?songdate .
+
+can written as
+
+::
+
+     ?song dbo:artist dbr:Diana_Krall ;
+           dbo:releaseDate ?songdate .
+
+In a full query this will be
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+
+  SELECT DISTINCT ?song ?songdate WHERE {
+     ?song dbo:artist dbr:Diana_Krall ;
+           dbo:releaseDate ?songdate .
+  }
+
+
+* Add more statements sharing the subject.
+
+
+Query 10
+~~~~~~~~
+
+The graph patterns indicated in triplets of
+
+* Subject
+* Predicate
+* Object
+
+are terminated with a "." symbol, as in
+
+::
+
+   ?song dbo:artist dbr:Diana_Krall .
+
+When two or more of such triplets have the same subject and predicate, they can
+be written in a more compact way using "," as terminator.
+
+For example
+
+
+The expression to search for an album that has the two songs
+
+* "Stop This World"
+* "Narrow Daylight"
+
+can be written as
+
+::
+
+    ?album  dbp:title  "Stop This World"@en .
+    ?album  dbp:title  "Narrow Daylight"@en .
+
+can written as
+
+::
+
+      ?album  dbp:title  "Stop This World"@en ,
+                         "Narrow Daylight"@en
+
+In a full query this will be
+
+::
+
+  PREFIX dbp: <http://dbpedia.org/property/>
+
+  SELECT DISTINCT ?album  WHERE {
+      ?album  dbp:title  "Stop This World"@en ,
+                         "Narrow Daylight"@en
+
+  }
+
+* Find the album where two of your favorite songs are included.
+
+
+Query 11
+~~~~~~~~
+
 Restrict the results to songs released after "2001"
 
 To do this use the FILTER function
@@ -230,7 +392,7 @@ To do this use the FILTER function
 * Limit the number of results to only five songs
 
 
-Query 09
+Query 12
 ~~~~~~~~
 
 Restrict the results to songs released after "2001" and before "2009".
