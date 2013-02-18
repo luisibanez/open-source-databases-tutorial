@@ -64,7 +64,7 @@ and in the "Query Text" window, type:
 Query 02
 ~~~~~~~~
 
-Add a second condition to retrieve all songs from the albums of these artist
+Add a second condition to retrieve all songs from the albums of this artist
 
 ::
 
@@ -84,8 +84,22 @@ Notice the addition of the prefix "dbp" pointing to the URI
 
     <http://dbpedia.org/property/>
 
-and how the variable "?album" is used internally to relate the Graph pattern
+and how the variable "?album" is used internally to relate the Graph Pattern
 between the artist and the songs.
+
+.. image:: ../../images/SPARQL_GraphPattern.svg
+   :scale: 50 %
+
+This figure illustrates the concept of the Graph Pattern that is being used in
+this particular query. We first think about the entities {singer, album, song},
+and their relationships { artist, title }, to then SELECT the information that
+we want to extract from the sections of the RDF graph WHERE that Pattern is
+found to match.
+
+The ?album variable was used in the Graph Pattern to link the artist to the
+song, and the node itself is not being included in the SELECT clause as part of
+the values that will be returned in the result.
+
 
 * Perform this query for two of your favorite artists
 
@@ -163,13 +177,13 @@ Try the following query
      ?song dbo:artist dbr:Diana_Krall .
   }
 
-* Compare the results of this query with the results we obtained when using the album as part of the Graph pattern
+* Compare the results of this query with the results we obtained when using the album as part of the Graph Pattern
 
 
 Query 06
 ~~~~~~~~
 
-Find the dates in which these songs were released by using the following graph pattern.
+Find the dates in which these songs were released by using the following graph Pattern.
 
 ::
 
@@ -268,7 +282,7 @@ explicit name of a resource in a given language.
 Query 09
 ~~~~~~~~
 
-The graph patterns indicated in triplets of
+The Graph Patterns indicated in triplets of
 
 * Subject
 * Predicate
@@ -315,7 +329,7 @@ In a full query this will be
 Query 10
 ~~~~~~~~
 
-The graph patterns indicated in triplets of
+The Graph Patterns indicated in triplets of
 
 * Subject
 * Predicate
@@ -459,7 +473,7 @@ Japanesse.
 Query 14
 ~~~~~~~~
 
-When defining a Graph pattern, sometimes it is convenient to define some of the
+When defining a Graph Pattern, sometimes it is convenient to define some of the
 triplets as OPTIONAL.
 
 The following query
@@ -519,7 +533,7 @@ For example, we can see what album did not have a next one
   }
 
 The function "bound()" indicates whether a variable was associated to a value
-or not. This is equivalent to whether a match was found for the graph pattern
+or not. This is equivalent to whether a match was found for the Graph Pattern
 that included this variable. When some variables are used in OPTIONAL triplets,
 they may be "unbound" which is what the expression "!bound()" tests for.
 

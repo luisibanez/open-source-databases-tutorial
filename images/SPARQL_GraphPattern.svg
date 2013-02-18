@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="13cm" height="7cm" viewBox="7 53 248 137" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <ellipse style="fill: #ffffff" cx="46.4327" cy="83.3294" rx="37.7893" ry="23.1698"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="46.4327" cy="83.3294" rx="37.7893" ry="23.1698"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="46.4327" y="87.2294">
+      <tspan x="46.4327" y="87.2294">album</tspan>
+    </text>
+  </g>
+  <g>
+    <ellipse style="fill: #ffffff" cx="178.989" cy="166.133" rx="37.7893" ry="23.1698"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="178.989" cy="166.133" rx="37.7893" ry="23.1698"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="178.989" y="170.033">
+      <tspan x="178.989" y="170.033">song</tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="120.889" y="57.8328">
+    <tspan x="120.889" y="57.8328"></tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #ffffff" cx="206.897" cy="84.5246" rx="47.1029" ry="30.0035"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="206.897" cy="84.5246" rx="47.1029" ry="30.0035"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="206.897" y="80.4246">
+      <tspan x="206.897" y="80.4246">Diana</tspan>
+      <tspan x="206.897" y="96.4246">Krall</tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="103" y="84.363">
+    <tspan x="103" y="84.363"></tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="103" y="75.363">
+    <tspan x="103" y="75.363">artist</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="60.8941" y1="104.735" x2="135.845" y2="152.068"/>
+    <polygon style="fill: #000000" points="142.186,156.072 131.061,154.96 135.845,152.068 136.401,146.505 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="142.186,156.072 131.061,154.96 135.845,152.068 136.401,146.505 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="84.222" y1="83.3294" x2="150.059" y2="84.3706"/>
+    <polygon style="fill: #000000" points="157.559,84.4892 147.481,89.3305 150.059,84.3706 147.639,79.3317 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="157.559,84.4892 147.481,89.3305 150.059,84.3706 147.639,79.3317 "/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="73" y="148.363">
+    <tspan x="73" y="148.363">title</tspan>
+  </text>
+</svg>
