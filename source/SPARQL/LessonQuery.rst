@@ -87,7 +87,7 @@ Notice the addition of the prefix "dbp" pointing to the URI
 and how the variable "?album" is used internally to relate the Graph Pattern
 between the artist and the songs.
 
-.. image:: ../../images/SPARQL_GraphPattern.svg
+.. image:: ../../images/SPARQL_GraphPattern_01.svg
    :scale: 50 %
 
 This figure illustrates the concept of the Graph Pattern that is being used in
@@ -443,6 +443,7 @@ The FILTER function can also be used to select the language of the result.
 
   PREFIX dbo: <http://dbpedia.org/ontology/>
   PREFIX dbr: <http://dbpedia.org/resource/>
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
   SELECT DISTINCT ?song ?songdate WHERE {
      ?song dbo:artist dbr:Diana_Krall .
@@ -460,6 +461,7 @@ Japanesse.
 
   PREFIX dbo: <http://dbpedia.org/ontology/>
   PREFIX dbr: <http://dbpedia.org/resource/>
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
   SELECT DISTINCT ?song ?label WHERE {
      ?song dbo:artist dbr:Celine_Dion .
@@ -583,5 +585,50 @@ The previous query could then we expressed as
   }
 
 * Repeate this search for two of your favorite artists.
+
+Query 18
+~~~~~~~~
+
+Richer Graph Patterns can be used to make more specific queries.
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+  PREFIX dbp: <http://dbpedia.org/property/>
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+  SELECT DISTINCT ?album ?song ?songname ?songdate WHERE {
+     ?album dbo:artist dbr:Diana_Krall .
+     ?album dbp:title ?song .
+     ?song  rdfs:label ?songname .
+     ?song  dbp:date   ?songdate .
+  }
+
+Note that the variable "?song" is used as object in one triplet, and as subject
+in two following triplets. This larger pattern carries a larger amount of
+information as input to the query, and also makes possible to return additional
+information in the result.
+
+.. image:: ../../images/SPARQL_GraphPattern_02.svg
+   :scale: 50 %
+
+We could simplify the expressions by taking advantage of the ";" notation
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+  PREFIX dbp: <http://dbpedia.org/property/>
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+  SELECT DISTINCT ?album ?song ?songname ?songdate WHERE {
+     ?album dbo:artist dbr:Diana_Krall ;
+            dbp:title ?song .
+     ?song  rdfs:label ?songname ;
+            dbp:date   ?songdate .
+  }
+
+
 
 .. _Virtuoso SPARQL Query Editor: http://dbpedia.org/sparql
