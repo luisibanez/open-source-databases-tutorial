@@ -420,7 +420,154 @@ To do this use the FILTER function
   * Experiment the range of dates to get the period of your favorite songs
 
 
+Query 13
+~~~~~~~~
+
+The FILTER function can also be used to select the language of the result.
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+
+  SELECT DISTINCT ?song ?songdate WHERE {
+     ?song dbo:artist dbr:Diana_Krall .
+     ?song rdfs:label ?songname .
+     FILTER ( lang(?songname) = "en" )
+  }
 
 
+* Search for an artist with songs in a different language.
+
+For example, the following query returns songs from Celine Dion, with titles in
+Japanesse.
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+
+  SELECT DISTINCT ?song ?label WHERE {
+     ?song dbo:artist dbr:Celine_Dion .
+     ?song rdfs:label ?label .
+     FILTER (lang(?label) = "ja" )
+  }
+
+* Repeate this search for two of your favorite artists.
+* Find whether they have songs in other languages.
+
+Query 14
+~~~~~~~~
+
+When defining a Graph pattern, sometimes it is convenient to define some of the
+triplets as OPTIONAL.
+
+The following query
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+  PREFIX dbp: <http://dbpedia.org/property/>
+
+  SELECT DISTINCT ?album ?this ?next WHERE {
+     ?album dbo:artist dbr:Ray_Charles .
+     ?album dbp:thisAlbum ?this .
+     ?album dbp:nextAlbum ?next .
+  }
+
+Lists all the albums from "Ray Charles", by showing the label of the name of
+the current album along with the name of the following album.
+
+By making the "nextAlbum" triplet to be an OPTIONAL one
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+  PREFIX dbp: <http://dbpedia.org/property/>
+
+  SELECT DISTINCT ?album ?this ?next WHERE {
+     ?album dbo:artist dbr:Ray_Charles .
+     ?album dbp:thisAlbum ?this .
+     OPTIONAL { ?album dbp:nextAlbum ?next . }
+  }
+
+We get result for a larger set of albums.
+
+* Repeate this search for two of your favorite artists.
+
+
+Query 15
+~~~~~~~~
+
+When using OPTIONAL triplets, we can then be more explicit about looking for results indicating connections that are not there.
+
+For example, we can see what album did not have a next one
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+  PREFIX dbp: <http://dbpedia.org/property/>
+
+  SELECT DISTINCT ?album ?this ?next WHERE {
+     ?album dbo:artist dbr:Ray_Charles .
+     ?album dbp:thisAlbum ?this .
+     OPTIONAL { ?album dbp:nextAlbum ?next . }
+     FILTER( !bound( ?next ) )
+  }
+
+The function "bound()" indicates whether a variable was associated to a value
+or not. This is equivalent to whether a match was found for the graph pattern
+that included this variable. When some variables are used in OPTIONAL triplets,
+they may be "unbound" which is what the expression "!bound()" tests for.
+
+The "!" symbol is used here as a logical negation, or NOT operator.
+
+
+* Repeate this search for two of your favorite artists.
+
+Query 16
+~~~~~~~~
+
+A more explict way of searching for non existing triplets is to use the "NOT EXISTS" test.
+
+The previous query could then we expressed as
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+  PREFIX dbp: <http://dbpedia.org/property/>
+
+  SELECT DISTINCT ?album ?this ?next WHERE {
+     ?album dbo:artist dbr:Ray_Charles .
+     ?album dbp:thisAlbum ?this .
+     FILTER NOT EXISTS { ?album dbp:nextAlbum ?next . }
+  }
+
+* Repeate this search for two of your favorite artists.
+
+Query 17
+~~~~~~~~
+
+An equivalent expression to "NOT EXISTS" is the "MINUS" expression.
+
+The previous query could then we expressed as
+
+::
+
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  PREFIX dbr: <http://dbpedia.org/resource/>
+  PREFIX dbp: <http://dbpedia.org/property/>
+
+  SELECT DISTINCT ?album ?this ?next WHERE {
+     ?album dbo:artist dbr:Ray_Charles .
+     ?album dbp:thisAlbum ?this .
+     MINUS { ?album dbp:nextAlbum ?next . }
+  }
+
+* Repeate this search for two of your favorite artists.
 
 .. _Virtuoso SPARQL Query Editor: http://dbpedia.org/sparql
