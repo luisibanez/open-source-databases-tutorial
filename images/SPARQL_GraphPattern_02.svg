@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="17cm" height="10cm" viewBox="7 53 321 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <ellipse style="fill: #ffffff" cx="46.4327" cy="83.3294" rx="37.7893" ry="23.1698"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="46.4327" cy="83.3294" rx="37.7893" ry="23.1698"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="46.4327" y="87.2294">
+      <tspan x="46.4327" y="87.2294">album</tspan>
+    </text>
+  </g>
+  <g>
+    <ellipse style="fill: #ffffff" cx="86.9893" cy="183.133" rx="37.7893" ry="23.1698"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="86.9893" cy="183.133" rx="37.7893" ry="23.1698"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="86.9893" y="187.033">
+      <tspan x="86.9893" y="187.033">song</tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="120.889" y="57.8328">
+    <tspan x="120.889" y="57.8328"></tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #ffffff" cx="206.897" cy="84.5246" rx="47.1029" ry="30.0035"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="206.897" cy="84.5246" rx="47.1029" ry="30.0035"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="206.897" y="80.4246">
+      <tspan x="206.897" y="80.4246">Diana</tspan>
+      <tspan x="206.897" y="96.4246">Krall</tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="103" y="84.363">
+    <tspan x="103" y="84.363"></tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="103" y="75.363">
+    <tspan x="103" y="75.363">artist</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="60.8941" y1="104.735" x2="70.5807" y2="152.187"/>
+    <polygon style="fill: #000000" points="72.0807,159.536 65.1817,150.738 70.5807,152.187 74.9796,148.738 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="72.0807,159.536 65.1817,150.738 70.5807,152.187 74.9796,148.738 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="84.222" y1="83.3294" x2="150.059" y2="84.3706"/>
+    <polygon style="fill: #000000" points="157.559,84.4892 147.481,89.3305 150.059,84.3706 147.639,79.3317 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="157.559,84.4892 147.481,89.3305 150.059,84.3706 147.639,79.3317 "/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="29" y="132.363">
+    <tspan x="29" y="132.363">title</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #ffffff" cx="269.497" cy="158.399" rx="56.4969" ry="23.359"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="269.497" cy="158.399" rx="56.4969" ry="23.359"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="269.497" y="162.299">
+      <tspan x="269.497" y="162.299">song date</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="121.902" y1="174.266" x2="203.408" y2="160.069"/>
+    <polygon style="fill: #000000" points="210.797,158.782 201.803,165.424 203.408,160.069 200.087,155.573 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="210.797,158.782 201.803,165.424 203.408,160.069 200.087,155.573 "/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="147" y="158.363">
+    <tspan x="147" y="158.363">date</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #ffffff" cx="268.654" cy="216.008" rx="58.1853" ry="23.2433"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="268.654" cy="216.008" rx="58.1853" ry="23.2433"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="268.654" y="219.908">
+      <tspan x="268.654" y="219.908">song name</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="121.902" y1="192" x2="201.072" y2="213.461"/>
+    <polygon style="fill: #000000" points="208.31,215.423 197.351,217.633 201.072,213.461 199.967,207.981 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="208.31,215.423 197.351,217.633 201.072,213.461 199.967,207.981 "/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="144.1" y="219.563">
+    <tspan x="144.1" y="219.563">label</tspan>
+  </text>
+</svg>
