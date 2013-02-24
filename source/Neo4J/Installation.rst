@@ -4,6 +4,17 @@ How To Install
 Linux
 -----
 
+Requisites
+~~~~~~~~~~
+
+First install the Java Run Time with the command
+
+::
+
+   sudo apt-get install openjdk-7-jre
+
+
+
 Debian Package
 ~~~~~~~~~~~~~~
 
