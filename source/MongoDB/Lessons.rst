@@ -6,5 +6,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   LessonInsert
-   LessonQuery
+   LessonInsertPython
+   LessonQueryPython
+   LessonInsertNodejs
+   LessonQueryNodejs
