@@ -10,7 +10,7 @@ node = {global: 'myGlobal', subscripts: ["testing"]};
 
 var data = db.get(node).data;
 
-console.log( data );
+console.log( 'Global Value = ', data );
 
 db.close();
 
