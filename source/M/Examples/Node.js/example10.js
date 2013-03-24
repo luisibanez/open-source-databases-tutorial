@@ -1,4 +1,4 @@
-var ewd = require('ewdgateway2');
+var ewd = require('ewdglobals');
 var nodem = require('nodem');
 
 var db = new nodem.Gtm();
