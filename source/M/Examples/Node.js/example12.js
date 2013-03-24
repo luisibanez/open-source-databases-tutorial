@@ -20,13 +20,17 @@ var document = {
 
 patient._setDocument(document);
 
-patient._fixProperties();
 
-var nameObj = patient.$('name');
-var nameVal = nameObj._value;
+console.log("Querying properties");
 
-console.log("patient name: " + nameVal);
+var nameObject = patient.$('name');
+var nameValue  = nameObject._value;
 
+var cityObject = patient.$('city');
+var cityValue  = cityObject._value;
+
+console.log("Name: " + nameValue);
+console.log("City: " + cityValue);
 
 db.close();
 
