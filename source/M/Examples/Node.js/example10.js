@@ -20,10 +20,5 @@ var document = {
 
 patient._setDocument(document);
 
-patient._fixProperties();
-
-console.log("Name: " + patient.name._value);
-console.log("City: " + patient.city._value);
-
 db.close();
 

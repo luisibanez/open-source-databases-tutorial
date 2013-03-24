@@ -20,7 +20,8 @@ var document = {
 
 patient._setDocument(document);
 
-patient._fixProperties();
+
+console.log("Getting its content");
 
 var record = patient._getDocument();
 console.log("patient info: " + JSON.stringify(record));
