@@ -25,22 +25,14 @@ var document = {
 
 patient._setDocument(document);
 
-console.log("Adding properties");
+console.log("Retrieving subsections");
 
-var physiotherapyObject = patient.$('treatments').$('physiotherapy');
 
 //
-//  Add more elements to the array of physiotherapies.
+// Retrieving a sub-section as a document.
 //
-physiotherapyObject.$(2)._value = "ankle";
-physiotherapyObject.$(3)._value = "wrist";
-physiotherapyObject.$(4)._value = "neck";
-
-
-console.log("Physiotherapy Treatements:");
-physiotherapyObject._forEach( function( id ) {
-   console.log( physiotherapyObject[id]._value );
-   });
+var record = patient.$('treatments')._getDocument();
+console.log("patient info: " + JSON.stringify(record));
 
 db.close();
 
