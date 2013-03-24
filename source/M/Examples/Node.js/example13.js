@@ -11,8 +11,6 @@ db.open();
 
 var patient = new ewd.GlobalNode('patient',[123456]);
 
-patient._delete();
-
 var document = {
   "name": "John Doe",
   "city": "New York",
