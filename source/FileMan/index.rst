@@ -8,6 +8,8 @@ Contents:
 
    Overview.rst
    Install.rst
+   DataModel.rst
+   Enter.rst
 
 .. index::
    pair: FileMan; Overview

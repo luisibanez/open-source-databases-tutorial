@@ -1,11 +1,13 @@
 Exploring Fileman
 =================
 
+The Data Dictionary
+-------------------
 A good way to start showing Fileman is to look at a file whose structure is typical. I would choose the language file for the exercise.
 
-Enter mumps first by sourcing ``gtmprofile`` as before and running ``mumps -dir``. Then run Fileman by typing ``D C^DI``. You do not have to know what that means, as the rest of Fileman doesn't require you to type Mumps commands.
+Enter mumps first by sourcing fileman.env as before and then running ``mumps -dir``. Then run Fileman by typing ``D C^DI``. You do not have to know what that means, as the rest of Fileman doesn't require you to type Mumps commands.
 
-.. Note:: Because the device handler is part of the VISTA Kernel, Fileman ships with a very rudimentary device handler. Paging through data may be somewhat painful. If you have unlimited scrollback on your terminal emulator, you may wish to change the variable IOSL in routine _ZIS to be 9999999 from the original 24. This way you don't have to keep pressing enter.
+.. Note:: Because the device handler is part of the VISTA Kernel, Fileman ships with a very rudimentary device handler. Paging through data may be somewhat painful because you will get only 24 lines at a time. On full VISTA, you can specify your page size.
 
 The first thing we will do is a data dictionary (i.e. Schema) of the language file. Text in ** ** is text you have to type::
 
@@ -102,6 +104,7 @@ interface as part of it. You just saw a few conventions up here:
    Fileman, if you are prompted to "Replace", you need to type "?" and follow
    the help on how to override the default. Replace only shows up if the
    default value is really long (above 15 characters). 
+ * Not shown here, but typing a caret (''^'') means bail out. On menus, you go to the higher level menu.
 
 Alright. Now it's time to figure out what that condensed listing means. In
 general, each line in this listing represents a "column" in relational database
@@ -169,6 +172,7 @@ Can you spot the two letter codes above using the information I just gave you?
 Notice that we have two records in this excerpt. The first record is ENGLISH, and the second is GERMAN. if you look at the ``^DI(.85,1,0)`` and ``^DI(.85,2,0)`` nodes, you will notice that the second piece of these nodes is EN and DE respectively.
 
 Now that I showed you this view, I can present to you the Fileman Global Data Dictionary Listing. You access this by typing "GLOBAL" instead of "CONDENSED" in the data dictionary listing.::
+
     Select DATA DICTIONARY UTILITY OPTION:    **L**IST FILE ATTRIBUTES
     START WITH What File: LANGUAGE//         (11 entries)
       GO TO What File: LANGUAGE//         (11 entries)
@@ -240,4 +244,160 @@ Now that I showed you this view, I can present to you the Fileman Global Data Di
 
 This presents the global data structure in a more intuitive format.
 
-TODO: Printing data.
+Last but not least, let's use the standard listing.
+
+In both the above examples, the listing that is chosen by default is ``STANDARD``. We overrode it the last two times; mainly because it's the most verbose. At this point, we are going to print it for just one field, like this::
+
+    Select DATA DICTIONARY UTILITY OPTION:    LIST FILE ATTRIBUTES
+     START WITH What File: LANGUAGE//         (11 entries)
+          GO TO What File: LANGUAGE//         (11 entries)
+          Select SUB-FILE: 
+    Select LISTING FORMAT: STANDARD//   
+    Start with field: FIRST// TWO LETTER CODE  
+    Go to field: TWO LETTER CODE
+
+    STANDARD DATA DICTIONARY #.85 -- LANGUAGE FILE                3/25/13    PAGE 1
+    STORED IN ^DI(.85,  (11 ENTRIES)   SITE: FILEMAN DEMOSTRATION SITE    (VERSION 2
+    2.2V2)   
+
+    DATA          NAME                  GLOBAL        DATA
+    ELEMENT       TITLE                 LOCATION      TYPE
+    -------------------------------------------------------------------------------
+
+    .85,.02       TWO LETTER CODE        0;2 FREE TEXT
+
+                  INPUT TRANSFORM:  K:$L(X)>2!($L(X)<2) X
+                  LAST EDITED:      NOV 1,2012 
+                  HELP-PROMPT:      Answer must be 2 characters in length. 
+                  DESCRIPTION:      Enter the two-letter code defined for this
+                                    language in the ISO 639-1 standard. Not every
+                                    language has a two-letter code; for those that
+                                    do not leave this field blank.  
+
+                  TECHNICAL DESCR:  Future versions of this file wil include an
+                                    optional key on this field.  
+
+
+Printing data
+-------------
+We spent a lot of time looking at the data dictionary. Now it's time to print the data.
+
+Follow the following dialog::
+
+    Select OPTION: 
+    GTM>**D C^DI**
+
+
+    VA FILEMAN 22.2V2
+
+
+    Select OPTION: **PR**INT FILE ENTRIES  
+
+    Output from what File: LANGUAGE//         (11 entries)
+    Sort by: ID NUMBER// **<enter>**
+    Start with ID NUMBER: FIRST// **<enter>**
+    First Print FIELD: **?**
+     Answer with FIELD NUMBER, or LABEL
+     Do you want the entire 20-Entry FIELD List? **Y**  (Yes)
+       Choose from:
+       .001         ID NUMBER
+       .01          NAME
+       .02          TWO LETTER CODE
+       .03          THREE LETTER CODE
+       .04          FOUR LETTER CODE
+       .05          ALTERNATE THREE LETTER CODE
+       .06          SCOPE
+       .07          TYPE
+       .08          LINGUISTIC CATEGORY
+       .09          MEMBER OF LANGUAGE SET
+       1            ALTERNATE NAME  (multiple)
+       10           DESCRIPTION  (word-processing)
+       10.1         ORDINAL NUMBER FORMAT
+       10.2         DATE/TIME FORMAT
+       10.21        DATE/TIME FORMAT (FMTE)
+       10.22        TIME
+       10.3         CARDINAL NUMBER FORMAT
+       10.4         UPPERCASE CONVERSION
+       10.5         LOWERCASE CONVERSION
+       20.2         DATE INPUT
+                                       to exit: 
+             
+    Type '&' in front of field name to get TOTAL for that field.
+         '!' to get COUNT.   '+' to get TOTAL & COUNT.    '#' to get MAX & MIN.
+         ']' to force SAVING PRINT TEMPLATE
+    You can follow field name with ';' and FORMAT SPECIFICATION.
+    Type '[TEMPLATE NAME]' in brackets to use an existing PRINT TEMPLATE.
+    First Print FIELD: **.01**  NAME
+    Then Print FIELD: **.02**  TWO LETTER CODE
+    Then Print FIELD: **.03**  THREE LETTER CODE
+    Then Print FIELD: **<enter>**
+    Heading (S/C): LANGUAGE List// **<enter>**
+
+    LANGUAGE List                                         MAR 25,2013@17:00   PAGE 1
+                                                                  TWO     THREE
+                                                                  LETTER  LETTER
+    NAME                                                          CODE    CODE
+    --------------------------------------------------------------------------------
+
+            ID NUMBER: 1
+    ENGLISH                                                       EN      ENG
+            ID NUMBER: 2
+    GERMAN                                                        DE      DEU
+            ID NUMBER: 3
+    SPANISH                                                       ES      SPA
+            ID NUMBER: 4
+    FRENCH                                                        FR      FRA
+            ID NUMBER: 5
+    FINNISH                                                       FI      FIN
+            ID NUMBER: 6
+    ITALIAN                                                       IT      ITA
+            ID NUMBER: 7
+    PORTUGUESE                                                    PT      POR
+            ID NUMBER: 10
+    ARABIC                                                        AR      ARA
+            ID NUMBER: 11
+    RUSSIAN                                                       RU      RUS
+            ID NUMBER: 12
+    GREEK                                                         EL      ELL
+            ID NUMBER: 18
+    HEBREW                                                        HE      HEB
+
+To ask Fileman to print everything it knows about a single record, you can use the inquire option.::
+
+    Select OPTION: **INQ**UIRE TO FILE ENTRIES  
+
+
+
+    Output from what File: LANGUAGE//         (11 entries)
+    Select LANGUAGE: **GR**EEK, MODERN (1453-)  GREEK     EL     ELL
+    Another one: 
+    Standard Captioned Output? Yes// **?**
+       If you answer 'N', you"ll be asked to create a formatted display,
+       as in the PRINT Option.
+    Standard Captioned Output? Yes//   (Yes)
+    Include COMPUTED fields:  (N/Y/R/B): NO// **?**
+
+    Enter a code from the list.
+         Select one of the following:
+
+              N         NO - No record number (IEN), no Computed Fields
+              Y         Computed Fields
+              R         Record Number (IEN)
+              B         BOTH Computed Fields and Record Number (IEN)
+
+
+    Include COMPUTED fields:  (N/Y/R/B): NO// **B**OTH Computed Fields and Record Number
+     (IEN)
+
+    ID NUMBER: 12                           NAME: GREEK
+      TWO LETTER CODE: EL                   THREE LETTER CODE: ELL
+      ALTERNATE THREE LETTER CODE: GRE
+    ALTERNATE NAME: ELLINIKA
+    ALTERNATE NAME: ELLINIKI GLOSSA
+    ALTERNATE NAME: GRAECAE
+    ALTERNATE NAME: GREC
+    ALTERNATE NAME: GRECO
+    ALTERNATE NAME: NEO-HELLENIC
+    ALTERNATE NAME: ROMAIC
+    ALTERNATE NAME: MODERN GREEK (1453-)
+    ALTERNATE NAME: GREEK, MODERN (1453-)

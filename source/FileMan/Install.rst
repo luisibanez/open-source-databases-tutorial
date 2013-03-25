@@ -34,13 +34,30 @@ probably don't have to if you are using Ubuntu 12.x or Red Hat.::
 
 Run GT.M
 --------
-As a normal user, source gtmprofile as below. This will create a clean database
+As a normal user, source gtmprofile as below, then unset the environment
+variable ``gtm_principal_editing`` (it causes a conflict with a setting in
+VISTA). This will create a clean database
 as well as routine directories under .fis-gtm in your home directory.::
 
     sam@thebes:~$ source /usr/lib/fis-gtm/V6.0-001_x86_64/gtmprofile
     Created file /home/sam/.fis-gtm/V6.0-001_x86_64/g/gtm.dat
     %GTM-I-JNLCREATE, Journal file /home/sam/.fis-gtm/V6.0-001_x86_64/g/gtm.mjl created for region DEFAULT with BEFORE_IMAGES
     %GTM-I-JNLSTATE, Journaling state for region DEFAULT is now ON
+    sam@thebes:~$ unset gtm_principal_editing
+
+So that you won't have to remember how to do these two steps prior to running Fileman, you can put them in
+a file called fileman.env whose contents look like this::
+    
+    #!/bin/sh
+    source /usr/lib/fis-gtm/V6.0-001_x86_64/gtmprofile
+    unset gtm_principal_editing
+
+And in your .bashrc, put a line there to source that file like this::
+
+    source ~/fileman.env
+
+This way, every time you log in, you will automatically be set up to run mumps
+right away.
 
 To run Mumps, it's just a simple matter of specifying the executable::
 
@@ -104,21 +121,21 @@ a few routines as follows::
     sam@thebes:~/.fis-gtm/r$ cd -
     sam@thebes:~$
 
-Initial configuration of Fileman is done from Mumps by running the routine DINIT. The major configuration item there is choosing your Mumps Operating System (i.e., your Mumps Virtual Machine). You need to answer this correctly in order for Fileman to function properly.::
+Initial configuration of Fileman is done from Mumps by running the routine DINIT. The major configuration item there is choosing your Mumps Operating System (i.e., your Mumps Virtual Machine). You need to answer this correctly in order for Fileman to function properly. Items to be typed by the user will be indicated by ** ** ::
 
-    sam@thebes:~$ mumps -dir
+    sam@thebes:~$ **mumps -dir**
 
-    GTM>D ^DINIT
+    GTM>**D ^DINIT**
 
 
     VA FileMan V.22.2V2
 
 
-    Initialize VA FileMan now?  NO//Y
+    Initialize VA FileMan now?  NO//**Y**
 
-    SITE NAME: FILEMAN DEMOSTRATION SITE
+    SITE NAME: **FILEMAN DEMOSTRATION SITE**
 
-    SITE NUMBER: 1   
+    SITE NUMBER: **1**
 
     ..................................
 
@@ -138,7 +155,7 @@ Initial configuration of Fileman is done from Mumps by running the routine DINIT
        MSM   
        OTHER   
        
-    TYPE OF MUMPS SYSTEM YOU ARE USING: GT.M(UNIX)  
+    TYPE OF MUMPS SYSTEM YOU ARE USING: **GT.M(UNIX)**
 
     Now loading other FileMan files--please wait..........................................................................................
     .....................................................................................
