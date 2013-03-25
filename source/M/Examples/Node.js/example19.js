@@ -27,20 +27,21 @@ patient._setDocument(document);
 
 console.log("Adding properties");
 
-var physiotherapyObject = patient.$('treatments').$('physiotherapy');
+var treatmentsObject = patient.$('treatments');
 
 //
-//  Add more elements to the array of physiotherapies.
+//  Add more elements to the array of treatments.
 //
-physiotherapyObject.$(2)._value = "ankle";
-physiotherapyObject.$(3)._value = "wrist";
-physiotherapyObject.$(4)._value = "neck";
+var chemotherapyObject = treatmentsObject.$("chemotherapy");
+var sessionsObject = chemotherapyObject.$("sessions");
+sessionsObject.$('January')._value = "dose 1";
+sessionsObject.$('February')._value = "dose 3";
+sessionsObject.$('March')._value = "dose 5";
+sessionsObject.$('April')._value = "dose 3";
 
 
-console.log("Physiotherapy Treatements:");
-physiotherapyObject._forEach( function( id ) {
-   console.log( physiotherapyObject[id]._value );
-   });
+var record = patient._getDocument();
+console.log("patient info: " + JSON.stringify(record));
 
 db.close();
 
