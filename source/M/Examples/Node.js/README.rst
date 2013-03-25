@@ -23,9 +23,9 @@ with the Node.js language constructs.
 For more details see Rob Tweed's `blog post`_:
 
 
-_GT.M: http://sourceforge.net/projects/fis-gtm/
-_Node.js: http://nodejs.org/
-_nodem: https://npmjs.org/package/nodem
-_ewdglobals: https://npmjs.org/package/ewdglobals
-_blog post: http://robtweed.wordpress.com/2013/01/24/a-phoenix-rises/
+.. _GT.M: http://sourceforge.net/projects/fis-gtm/
+.. _Node.js: http://nodejs.org/
+.. _nodem: https://npmjs.org/package/nodem
+.. _ewdglobals: https://npmjs.org/package/ewdglobals
+.. _blog post: http://robtweed.wordpress.com/2013/01/24/a-phoenix-rises/
 
