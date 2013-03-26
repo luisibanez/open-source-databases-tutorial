@@ -10,6 +10,8 @@ Contents:
    Install.rst
    DataModel.rst
    Enter.rst
+   Programmers.rst
+   Resources.rst
 
 .. index::
    pair: FileMan; Overview

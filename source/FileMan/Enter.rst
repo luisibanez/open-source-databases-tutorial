@@ -285,4 +285,401 @@ Here are the fields according to the condensed data dictionary listing::
 
 At this point, we are ready to enter, edit and delete data in Fileman.
 
+Enter Data in Fileman
+---------------------
+Entering data in Fileman is very easy. There are several user conventions that seem foreign to an outsider, but after a week of working in Fileman, they will make sense. These conventions are:
+
+ * To accept data, press enter.
+ * ? give you help; ?? gives you more help. On the record selection prompt, they list the entries available to pick from.
+ * ``TEXT//`` means that ``TEXT`` is the default; and all you have to press is enter to accept the default value.
+ * ^ gets you out.
+ * @ deletes an entry. @ on the .01 field deletes a record.
+ * If you are faced with a Replace prompt, you can enter ``...`` to replace the whole string. Alternately, you can replace just a part of it by typing it.
+
+Follow the prompts below::
+
+    GTM>D C^DI
+
+
+    VA FILEMAN 22.2V2
+
+
+    Select OPTION: ENTER OR EDIT FILE ENTRIES  
+
+
+
+    Input to what File: MUSICAL KEY// BACH WERKE VERZEICHNIS  
+                                              (0 entries)
+    EDIT WHICH FIELD: ALL// 
+
+
+    Select BACH WERKE VERZEICHNIS BWV NUMBER: 1046
+      Are you adding '1046' as a new BACH WERKE VERZEICHNIS (the 1ST)? No// Y
+      (Yes)
+    WORK TITLE: Brandenburg Concerto No. 1
+    YEAR COMPOSED: 1717
+    Select INSTRUMENT: HORN
+      Are you adding 'HORN' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: OBOE
+      Are you adding 'OBOE' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: VIOLIN
+      Are you adding 'VIOLIN' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: VIOLIN PICCOLO 
+      Are you adding 'VIOLIN PICCOLO' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: VIOLA
+      Are you adding 'VIOLA' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: CELLO
+      Are you adding 'CELLO' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: BASSOON
+      Are you adding 'BASSOON' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: CONTINUO
+      Are you adding 'CONTINUO' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: 
+    KEY: F MAJOR
+      Are you adding 'F MAJOR' as a new MUSICAL KEY (the 1ST)? No// Y  (Yes)
+
+
+    Select BACH WERKE VERZEICHNIS BWV NUMBER: ?
+        Answer with BACH WERKE VERZEICHNIS BWV NUMBER:
+       1046   
+             
+            You may enter a new BACH WERKE VERZEICHNIS, if you wish
+            Answer must be 1-7 characters in length.
+       
+    Select BACH WERKE VERZEICHNIS BWV NUMBER: 1047
+      Are you adding '1047' as a new BACH WERKE VERZEICHNIS (the 2ND)? No// Y
+      (Yes)
+    WORK TITLE: Brandenburg Concerto No. 2
+    YEAR COMPOSED: 1717
+    Select INSTRUMENT: TRUMPET
+      Are you adding 'TRUMPET' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: FLUTE/RECORDER
+      Are you adding 'FLUTE/RECORDER' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: OBOE
+      Are you adding 'OBOE' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: VIOLIN
+      Are you adding 'VIOLIN' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: VIOLA
+      Are you adding 'VIOLA' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: CELLO
+      Are you adding 'CELLO' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: CONTINUO
+      Are you adding 'CONTINUO' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: 
+    KEY: F MAJOR  
+
+
+    Select BACH WERKE VERZEICHNIS BWV NUMBER: 1048
+      Are you adding '1048' as a new BACH WERKE VERZEICHNIS (the 3RD)? No// Y
+      (Yes)
+    WORK TITLE: Brandenburg Concerto No. 3
+    YEAR COMPOSED: 1711
+    Select INSTRUMENT: VIOLIN
+      Are you adding 'VIOLIN' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: VIOLA
+      Are you adding 'VIOLA' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: CELLO
+      Are you adding 'CELLO' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: DOUBLE BASS
+      Are you adding 'DOUBLE BASS' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: CONTINUO
+      Are you adding 'CONTINUO' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: 
+    KEY: G MAJOR
+      Are you adding 'G MAJOR' as a new MUSICAL KEY (the 2ND)? No// Y  (Yes)
+
+
+    Select BACH WERKE VERZEICHNIS BWV NUMBER: 1049
+      Are you adding '1049' as a new BACH WERKE VERZEICHNIS (the 4TH)? No// Y
+      (Yes)
+    WORK TITLE: Brandenburg Concerto No. 4
+    YEAR COMPOSED: 1720
+    Select INSTRUMENT: VIOLIN
+      Are you adding 'VIOLIN' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: VIOLA
+      Are you adding 'VIOLA' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: CELLO
+      Are you adding 'CELLO' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: DOUBLE BASS
+      Are you adding 'DOUBLE BASS' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: FLUTE/RECORDER
+      Are you adding 'FLUTE/RECORDER' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: CONTINUO
+      Are you adding 'CONTINUO' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: 
+    KEY: G MAJOR  
+
+
+    Select BACH WERKE VERZEICHNIS BWV NUMBER: 1050
+      Are you adding '1050' as a new BACH WERKE VERZEICHNIS (the 5TH)? No// Y
+      (Yes)
+    WORK TITLE: Brandenburg Concerto No. 5
+    YEAR COMPOSED: 1720
+    Select INSTRUMENT: FLUTE
+      Are you adding 'FLUTE' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: VIOLIN
+      Are you adding 'VIOLIN' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: VIOLA
+      Are you adding 'VIOLA' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: CELLO
+      Are you adding 'CELLO' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: CONTINUO
+      Are you adding 'CONTINUO' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: 
+    KEY: D MAJOR
+      Are you adding 'D MAJOR' as a new MUSICAL KEY (the 3RD)? No// Y  (Yes)
+
+
+    Select BACH WERKE VERZEICHNIS BWV NUMBER: 1051
+      Are you adding '1051' as a new BACH WERKE VERZEICHNIS (the 6TH)? No// Y
+      (Yes)
+    WORK TITLE: Brandenburg Concerto No. 6
+    YEAR COMPOSED: 1708
+    Select INSTRUMENT: VIOLA
+      Are you adding 'VIOLA' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: VIOLA DE GAMBA
+      Are you adding 'VIOLA DE GAMBA' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: CELLO
+      Are you adding 'CELLO' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: CONTINUO
+      Are you adding 'CONTINUO' as a new INSTRUMENT? No// Y  (Yes)
+      NUMBER: 
+    Select INSTRUMENT: 
+    KEY: B FLAT MAJOR
+      Are you adding 'B FLAT MAJOR' as a new MUSICAL KEY (the 4TH)? No// Y  (Yes)
+
+If you have been paying attention, you may have noticed that from within this file we are actually adding data to another file in the ``KEY`` field. The reason we were able to do that is that in ``MODIFY FILE ATTRIBUTES`` for the ``KEY`` field, we said that this field is a ``LAYGO`` pointer (Learn As You GO). This means that it will try to find the entry we look up. If it can't find it, it will add it. You need to be careful about your capitalization, as differently cased entries of the same text are not the same to Fileman, although in general it will capitalize your lower case text when searching the database.
+
+You may have noticed that if we do a ? to list the records, we only see the number of the work, which is what we designated in .01, like this::
+
+    Select BACH WERKE VERZEICHNIS BWV NUMBER: ?
+        Answer with BACH WERKE VERZEICHNIS BWV NUMBER
+       Choose from:
+       1046   
+       1047   
+       1048   
+       1049   
+       1050   
+       1051   
+             
+            You may enter a new BACH WERKE VERZEICHNIS, if you wish
+            Answer must be 1-7 characters in length.
+       
+    Select BACH WERKE VERZEICHNIS BWV NUMBER: 
+
+We can correct that by making other fields identifiers: This means that these fields need to be filled out and shown to the user whenever they are querying the file. Follow the prompts::
+
+
+    Select OPTION: ?
+        Answer with OPTION NUMBER, or NAME
+       Choose from:
+       1            ENTER OR EDIT FILE ENTRIES
+       2            PRINT FILE ENTRIES
+       3            SEARCH FILE ENTRIES
+       4            MODIFY FILE ATTRIBUTES
+       5            INQUIRE TO FILE ENTRIES
+       6            UTILITY FUNCTIONS
+       7            OTHER OPTIONS
+       8            DATA DICTIONARY UTILITIES
+       9            TRANSFER ENTRIES
+       
+    Select OPTION: 6  UTILITY FUNCTIONS
+    Select UTILITY OPTION: ??
+        
+       Choose from:
+       1            VERIFY FIELDS
+       2            CROSS-REFERENCE A FIELD OR FILE
+       3            IDENTIFIER
+       4            RE-INDEX FILE
+       6            EDIT FILE
+       7            OUTPUT TRANSFORM
+       8            TEMPLATE EDIT
+       9            UNEDITABLE DATA
+       10           MANDATORY/REQUIRED FIELD CHECK
+       11           KEY DEFINITION
+       
+    Select UTILITY OPTION: 3  IDENTIFIER
+
+    Modify what File: BACH WERKE VERZEICHNIS//   (6 entries)
+    Select FIELD: ?
+        Answer with FIELD NUMBER, or LABEL
+       Choose from:
+       .02          WORK TITLE
+       .03          YEAR COMPOSED
+       1            INSTRUMENT  (multiple)
+       2.1          KEY
+       
+    Select FIELD: .02  WORK TITLE
+    Want to make 'WORK TITLE' an Identifier? No// Y  (Yes)
+    Want to display WORK TITLE whenever a lookup is done
+      on an entry in the 'BACH WERKE VERZEICHNIS' File? Yes//   (Yes)
+
+
+    Select UTILITY OPTION:    IDENTIFIER
+
+    Modify what File: BACH WERKE VERZEICHNIS//   (6 entries)
+    Select FIELD: .03  YEAR COMPOSED
+    Want to make 'YEAR COMPOSED' an Identifier? No//   (No)
+
+
+    Select UTILITY OPTION:    IDENTIFIER
+
+    Modify what File: BACH WERKE VERZEICHNIS//   (6 entries)
+    Select FIELD: 2.1  KEY
+    Want to make 'KEY' an Identifier? No// Y  (Yes)
+    Want to display KEY whenever a lookup is done
+      on an entry in the 'BACH WERKE VERZEICHNIS' File? Yes//   (Yes)
+
+
+    Select UTILITY OPTION: 
+
+
+
+
+    Select OPTION: ENTER OR EDIT FILE ENTRIES  
+
+
+
+    Input to what File: BACH WERKE VERZEICHNIS//   (6 entries)
+    EDIT WHICH FIELD: ALL// 
+
+
+    Select BACH WERKE VERZEICHNIS BWV NUMBER: ?
+        Answer with BACH WERKE VERZEICHNIS BWV NUMBER
+       Choose from:
+       1046        Brandenburg Concerto No. 1     F MAJOR
+       1047        Brandenburg Concerto No. 2     F MAJOR
+       1048        Brandenburg Concerto No. 3     G MAJOR
+       1049        Brandenburg Concerto No. 4     G MAJOR
+       1050        Brandenburg Concerto No. 5     D MAJOR
+       1051        Brandenburg Concerto No. 6     B FLAT MAJOR
+             
+            You may enter a new BACH WERKE VERZEICHNIS, if you wish
+            Answer must be 1-7 characters in length.
+       
+    Select BACH WERKE VERZEICHNIS BWV NUMBER: 
+
+Much better!
+
+Edit Data in Fileman
+--------------------
+To edit data in Fileman, we have to select them. In general, the way selection works in Fileman is that it searches all ``LOOKUP CROSS-REFERENCES``. We won't cover how to create cross-refereces; suffice it to say that Fileman creates the "B" index (viz. cross-reference) on the .01 field automatically. (Note that this has nothing to do with B tree structures, a linked list structure implemented in C). For this file to be user-friendly, we would create cross references for the uppercase of the ``WORK TITLE`` and ``KEY`` fields, as well as the instrument multiple so that you can search by instrument as well.
+
+So I said we will use the automatic "B" cross reference in searching. To see what entries are available, type a ``?`` or ``??``.::
+
+    Select OPTION: ENTER OR EDIT FILE ENTRIES  
+
+
+
+    Input to what File: BACH WERKE VERZEICHNIS//   (6 entries)
+    EDIT WHICH FIELD: ALL// 
+
+
+    Select BACH WERKE VERZEICHNIS BWV NUMBER: ?
+        Answer with BACH WERKE VERZEICHNIS BWV NUMBER
+       Choose from:
+       1046        Brandenburg Concerto No. 1     F MAJOR
+       1047        Brandenburg Concerto No. 2     F MAJOR
+       1048        Brandenburg Concerto No. 3     G MAJOR
+       1049        Brandenburg Concerto No. 4     G MAJOR
+       1050        Brandenburg Concerto No. 5     D MAJOR
+       1051        Brandenburg Concerto No. 6     B FLAT MAJOR
+             
+            You may enter a new BACH WERKE VERZEICHNIS, if you wish
+            Answer must be 1-7 characters in length.
+       
+    Select BACH WERKE VERZEICHNIS BWV NUMBER: 
+
+To select an entry, type its first field::
+
+    Select OPTION:    ENTER OR EDIT FILE ENTRIES
+
+
+
+    Input to what File: BACH WERKE VERZEICHNIS//   (6 entries)
+    EDIT WHICH FIELD: ALL// 
+
+
+    Select BACH WERKE VERZEICHNIS BWV NUMBER: 1049       Brandenburg Concerto No. 4     G MAJOR
+
+Once you select the entry, the original answers will precede the //. This way you can accept the value unchanged when you press enter. Let's say I need to change the year a work was composed. All I have to do is type my new value in.::
+
+    BWV NUMBER: 1049// 
+    WORK TITLE: Brandenburg Concerto No. 4  Replace 
+    YEAR COMPOSED: 1720// 1721
+    Select INSTRUMENT: CONTINUO// ?
+        Answer with INSTRUMENT
+       Choose from:
+       CELLO   
+       CONTINUO   
+       DOUBLE BASS   
+       FLUTE/RECORDER   
+       VIOLA   
+       VIOLIN   
+             
+            You may enter a new INSTRUMENT, if you wish
+            Answer must be 2-100 characters in length.
+       
+    Select INSTRUMENT: CONTINUO// 
+      INSTRUMENT: CONTINUO// 
+      NUMBER: 
+    Select INSTRUMENT: 
+    KEY: G MAJOR// 
+
+Notice that pressing ? on a multiple lists the entries, like it does with the top level file. Selecting an entry in a sub-file is the same as selecting an entry for a top level file. In fact, so are cross-references.
+
+Deleting an Entry
+-----------------
+Deleting any field can by done by typing the ``@``.::
+
+    Select BACH WERKE VERZEICHNIS BWV NUMBER: 1049       Brandenburg Concerto No. 4     G MAJOR
+    BWV NUMBER: 1049// 
+    WORK TITLE: Brandenburg Concerto No. 4  Replace 
+    YEAR COMPOSED: 1721// 
+    Select INSTRUMENT: CONTINUO// 
+      INSTRUMENT: CONTINUO// 
+      NUMBER: 
+    Select INSTRUMENT: 
+    KEY: G MAJOR// @
+       SURE YOU WANT TO DELETE? y  (Yes)
+
+Deleting the .01 field in a Fileman entry ALWAYS deletes the entry. This is a significant different between Fileman and other Databases. The .01 is always assumed to be a semantic field; without it the record cannot exist.::
+
+    Select BACH WERKE VERZEICHNIS BWV NUMBER: 1049       Brandenburg Concerto No. 4     
+    BWV NUMBER: 1049// @
+       SURE YOU WANT TO DELETE THE ENTIRE '1049' BACH WERKE VERZEICHNIS? Y  (Yes)
 
