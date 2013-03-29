@@ -1,16 +1,15 @@
 Interacting with Fileman as a Programmer
 ----------------------------------------
 This tutorial covered a lot of how to interact with Fileman when first making
-files and how may end users use it. We won't cover programmer calls in detail.
-However here is a brief guide.
+files and how end users may use it. We won't cover programmer calls in detail, but here is a brief guide.
 
-Fileman has two sets of APIs. The old generation ("Classic") and new generation (Database Server, or DBS). The old
+Fileman has two sets of APIs: the old generation ("Classic") and new generation (Database Server, or DBS). The old
 generation APIs assume that you are interacting with Fileman via a terminal.
 The new generation APIs write nothing to the screen, and thus are designed to
 be used by client applications interfacing with Fileman via TCP. Internally, Fileman
 runs by and large by eating its own dog food: it calls the APIs itself.
 
-Here is an example of one API to invoke the select an entry logic.::
+Here is an example of one API which invokes the "select an entry" logic.::
 
     GTM>SET DIC=1001,DIC(0)="AEQ" D ^DIC
 

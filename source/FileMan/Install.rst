@@ -1,6 +1,6 @@
 Installation Instructions
 =========================
-Installation presupposes a rudimentary knowledge of Unix.
+Installation presupposes a rudimentary knowledge of UNIX.
 
 The software is supplied as a set of routines packaged in Routine Output (RSA) format.
 The latest version can be downloaded from OSEHRA's public repository:
@@ -9,11 +9,11 @@ https://github.com/OSEHRA/fileman-22p2
 As of the time of this writing, the RSA file can be obtained by getting the response of this URL:
 https://github.com/OSEHRA/fileman-22p2/blob/master/VA-FILEMAN-22P2V2.RSA?raw=true
 
-Supported Mumps Virtual Machines
+Supported MUMPS Virtual Machines
 --------------------------------
-Fileman works on the two major Mumps implementations that are used in
-production systems today. They are Intersystems CachÃ© and Fidelity GT.M. GT.M
-running on Linux is available as open source, so it's will we will use in our
+Fileman works on the two major MUMPS implementations that are used in
+production systems today. They are Intersystems Caché and Fidelity GT.M. GT.M
+running on Linux is available as open source, so we will use it in our
 demonstration.
 
 Install GT.M
@@ -56,10 +56,10 @@ And in your .bashrc, put a line there to source that file like this::
 
     source ~/fileman.env
 
-This way, every time you log in, you will automatically be set up to run mumps
+This way, every time you log in, you will automatically be set up to run MUMPS
 right away.
 
-To run Mumps, it's just a simple matter of specifying the executable::
+To run MUMPS, it's just a simple matter of specifying the executable::
 
     sam@thebes:~$ mumps -dir
 
@@ -74,7 +74,7 @@ In your home directory, download Fileman using the link given above::
 
     wget -O VA-FILEMAN-22P2V2.RSA https://github.com/OSEHRA/fileman-22p2/blob/master/VA-FILEMAN-22P2V2.RSA?raw=true
 
-Now, you need to import the RSA file (a collection of routines) into GT.M using the %RI utility. You need to know what's the
+Now, you need to import the RSA file (a collection of routines) into GT.M using the %RI utility. You need to know which
 directory you will put the imported routines into. MAKE SURE TO PUT A TRAILING
 SLASH ON THE ROUTINE DIRECTORY WHEN YOU ENTER IT. Your routine directory will
 be your home directory followed by /.fis-gtm/r/::
@@ -121,7 +121,7 @@ a few routines as follows::
     sam@thebes:~/.fis-gtm/r$ cd -
     sam@thebes:~$
 
-Initial configuration of Fileman is done from Mumps by running the routine DINIT. The major configuration item there is choosing your Mumps Operating System (i.e., your Mumps Virtual Machine). You need to answer this correctly in order for Fileman to function properly. Items to be typed by the user will be indicated by ** ** ::
+Initial configuration of Fileman is done from MUMPS by running the routine DINIT. The major configuration item there is choosing your MUMPS Operating System (i.e., your MUMPS Virtual Machine). You need to answer this correctly in order for Fileman to function properly. Items to be typed by the user will be indicated by ** ** ::
 
     sam@thebes:~$ **mumps -dir**
 

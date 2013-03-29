@@ -2,16 +2,16 @@ Entering, Updating and Deleting Data
 ====================================
 Making our own File
 -------------------
-To illustrate entering, updating and deleting data, let's make our own file. The option to make a file is not obvious. It's ''MODIFY FILE ATTRIBUTES (#4)''. We will make a file for subset of the information in the Bach Work Catalogue (the Bach-Werke-Verzeichnis or BWV). You can find the catalogue here: http://www.jsbach.org/bwvlist.html
+To illustrate entering, updating and deleting data, let's make our own file. The option to make a file is not obvious. It's ''MODIFY FILE ATTRIBUTES (#4)''. We will make a file for a subset of the information in the Bach Work Catalogue (the Bach-Werke-Verzeichnis or BWV). You can find the catalogue here: http://www.jsbach.org/bwvlist.html
 
-Let's start by designing the file on "paper" first before putting it into
+Let's start by designing the file on "paper" first, before putting it into
 Fileman.
 
 When you create a file in Fileman, the .01 field is the one that is displayed
 to the user by default. It's normally the most important field in a file. It's created automatically when you make a new file. In this case, we can make the .01 field either the BWV number or the title of the work. For semantic reasons, I believe the BWV number to be the most logical .01.
 
 Since BWV's are unique for each work, I will make the .01 field a key. I won't
-cover this in this introductory tutorial.
+cover keys in this introductory tutorial.
 
 How big is the .01 field? Well, in this case it should be 7 characters long.
 That's the longest BWV number (ANH117a).
@@ -27,7 +27,7 @@ you run out of room. Running out of room typically means that unless you
 configured Fileman differently, the total length of fields exceeds 255 minus
 the delimiters. Once we are on the next node, which let's say is 1, you can
 name your fields 1.1, 1.2 and so forth. You can have non-numeric nodes as well,
-so this scheme may not work as your cannot have non-numeric field numbers.
+so this scheme may not work as you cannot have non-numeric field numbers.
 
 Keeping this in mind, let's do this file structure::
 
@@ -43,11 +43,11 @@ Keeping this in mind, let's do this file structure::
 We have enough here to keep up busy for several weeks.
 
 One last point we have to attend to before creating the files is deciding their
-number among all Fileman files and storage location in the Mumps database. In
+number among all Fileman files and storage location in the MUMPS database. In
 VISTA, you have to apply for a number and namespace from the database
-adminstrator, so your files won't collide with somebody else's files in the
+administrator, so your files won't collide with somebody else's files in the
 database. In our case, since this is a standalone system, we can pick anything.
-So we will number our file as 1001, and our storage location on the Mumps
+So we will number our file as 1001, and our storage location on the MUMPS
 database will be ^BWV. For our Musical key, let's put it in 1002 and in the global ^MusicKey
 
 I will show a couple of screenshots. After that, you will need to learn how to
@@ -94,7 +94,7 @@ Now type in ``.01``, and now you will be presented with this red on black form (
        HELP-PROMPT: NAME MUST BE 3-30 CHARACTERS, NOT NUMERIC OR STARTING WITH PU
     XECUTABLE HELP:                                                              
 
-You can browse this form using 1. Tab key; 2. Arrow keys; 3. Mouse. 4. Enter key. Make sure to press the Enter key after each field because that or the mouse opens subforms in the main form. Remeber to use the "?" and "??" for help. If you press enter on the FREE TEXT field, you will get this subform::
+You can browse this form using 1. Tab key; 2. Arrow keys; 3. Mouse. 4. Enter key. Make sure to press the Enter key after each field because that or the mouse opens subforms in the main form. Remember to use the "?" and "??" for help. If you press enter on the FREE TEXT field, you will get this subform::
 
                                Field #.01 in File #1001                          
     FIELD LABEL: NAME                             DATA TYPE... FREE TEXT           
@@ -151,7 +151,7 @@ To get out of the form, click or type "S", and then click or type "E". If typing
 
     COMMAND: E                                                        HELP  Insert 
 
-Once you exit, you will be drop back to this prompt::
+Once you exit, you will be dropped back to this prompt::
 
     Select FIELD:
 
@@ -201,7 +201,7 @@ Create field 1 and name it INSTRUMENT. On Data Type, put Free text, and designat
     SHOULD USER SEE AN "ADDING A NEW ENTRY" MESSAGE: YES
     HAVING ENTERED OR EDITED ONE MULTIPLE, SHOULD USER BE ASKED ANOTHER: YES
 
-You then nagivate to the help prompt. Pressing enter again has Fileman ask you where to store the multiple. Just accept the defaults in that dialog for ``SUBSCRIPT`` and ``SUB-DICTIONARY NUMBER``.
+You then navigate to the help prompt. Pressing enter again causes Fileman to ask you where to store the multiple. Just accept the defaults in that dialog for ``SUBSCRIPT`` and ``SUB-DICTIONARY NUMBER``.
 
 When you exit the form, you are dropped into a different prompt since you are now inside of a subfile::
 
@@ -290,7 +290,7 @@ Enter Data in Fileman
 Entering data in Fileman is very easy. There are several user conventions that seem foreign to an outsider, but after a week of working in Fileman, they will make sense. These conventions are:
 
  * To accept data, press enter.
- * ? give you help; ?? gives you more help. On the record selection prompt, they list the entries available to pick from.
+ * ? gives you help; ?? gives you more help. On the record selection prompt, they list the entries available to pick from.
  * ``TEXT//`` means that ``TEXT`` is the default; and all you have to press is enter to accept the default value.
  * ^ gets you out.
  * @ deletes an entry. @ on the .01 field deletes a record.
@@ -501,7 +501,7 @@ You may have noticed that if we do a ? to list the records, we only see the numb
        
     Select BACH WERKE VERZEICHNIS BWV NUMBER: 
 
-We can correct that by making other fields identifiers: This means that these fields need to be filled out and shown to the user whenever they are querying the file. Follow the prompts::
+We can correct that by making other fields identifiers: This means that these fields need to be filled out and shown to the user whenever they are querying the file. To do this, follow the prompts::
 
 
     Select OPTION: ?
@@ -597,9 +597,9 @@ Much better!
 
 Edit Data in Fileman
 --------------------
-To edit data in Fileman, we have to select them. In general, the way selection works in Fileman is that it searches all ``LOOKUP CROSS-REFERENCES``. We won't cover how to create cross-refereces; suffice it to say that Fileman creates the "B" index (viz. cross-reference) on the .01 field automatically. (Note that this has nothing to do with B tree structures, a linked list structure implemented in C). For this file to be user-friendly, we would create cross references for the uppercase of the ``WORK TITLE`` and ``KEY`` fields, as well as the instrument multiple so that you can search by instrument as well.
+To edit data in Fileman, we have to select it. In general, the way selection works in Fileman is that it searches all ``LOOKUP CROSS-REFERENCES``. We won't cover how to create cross-references; suffice it to say that Fileman creates the "B" index (viz. cross-reference) on the .01 field automatically. (Note that this has nothing to do with B tree structures, a linked list structure implemented in C). For this file to be user-friendly, we would create cross references for the uppercase of the ``WORK TITLE`` and ``KEY`` fields, as well as the instrument multiple so that you could search by instrument as well.
 
-So I said we will use the automatic "B" cross reference in searching. To see what entries are available, type a ``?`` or ``??``.::
+For this example, we will use the automatic "B" cross reference in searching. To see what entries are available, type a ``?`` or ``??``.::
 
     Select OPTION: ENTER OR EDIT FILE ENTRIES  
 
@@ -660,7 +660,7 @@ Once you select the entry, the original answers will precede the //. This way yo
     Select INSTRUMENT: 
     KEY: G MAJOR// 
 
-Notice that pressing ? on a multiple lists the entries, like it does with the top level file. Selecting an entry in a sub-file is the same as selecting an entry for a top level file. In fact, so are cross-references.
+Notice that pressing ? on a multiple lists the entries, the same way it does with the top level file. Selecting an entry in a sub-file is the same as selecting an entry for a top level file. In fact, so are cross-references.
 
 Deleting an Entry
 -----------------
@@ -677,7 +677,7 @@ Deleting any field can by done by typing the ``@``.::
     KEY: G MAJOR// @
        SURE YOU WANT TO DELETE? y  (Yes)
 
-Deleting the .01 field in a Fileman entry ALWAYS deletes the entry. This is a significant different between Fileman and other Databases. The .01 is always assumed to be a semantic field; without it the record cannot exist.::
+Deleting the .01 field in a Fileman entry ALWAYS deletes the entry. This is a significant difference between Fileman and other Database management systems. The .01 is always assumed to be a semantic field; without it the record cannot exist.::
 
     Select BACH WERKE VERZEICHNIS BWV NUMBER: 1049       Brandenburg Concerto No. 4     
     BWV NUMBER: 1049// @

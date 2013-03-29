@@ -3,13 +3,13 @@ Exploring Fileman
 
 The Data Dictionary
 -------------------
-A good way to start showing Fileman is to look at a file whose structure is typical. I would choose the language file for the exercise.
+A good way to start showing Fileman is to look at a file whose structure is typical. I will use the language file as an example.
 
-Enter mumps first by sourcing fileman.env as before and then running ``mumps -dir``. Then run Fileman by typing ``D C^DI``. You do not have to know what that means, as the rest of Fileman doesn't require you to type Mumps commands.
+Enter MUMPS first by sourcing fileman.env as before and then running ``mumps -dir``. Then run Fileman by typing ``D C^DI``. You do not have to know what that means, as the rest of Fileman doesn't require you to type MUMPS commands.
 
 .. Note:: Because the device handler is part of the VISTA Kernel, Fileman ships with a very rudimentary device handler. Paging through data may be somewhat painful because you will get only 24 lines at a time. On full VISTA, you can specify your page size.
 
-The first thing we will do is a data dictionary (i.e. Schema) of the language file. Text in ** ** is text you have to type::
+The first thing we will do is explore the data dictionary (i.e. Schema) of the language file. Text in ** ** is text you have to type::
 
     GTM>**D C^DI**
 
@@ -86,12 +86,12 @@ The first thing we will do is a data dictionary (i.e. Schema) of the language fi
     10.5      LOWERCASE CONVERSION (K), [LC;E1,245]
     20.2      DATE INPUT (K), [20.2;E1,245]
 
-What you see here is the condensed data dictionary listing for the language
+What you see here is the condensed data dictionary listing for the Language
 file.
 
 Before we explain the condensed data dictionary listing, let's talk about the
-Fileman user interface. Unlike most databases, Fileman includes the end user
-interface as part of it. You just saw a few conventions up here:
+Fileman user interface. Unlike most database management systems, Fileman includes an end user
+interface. You just saw a few conventions above:
 
  * To accept your input, you must press enter/return.
  * Typing ``?`` means ask for help. On a menu, it give you the menu choices.
@@ -104,35 +104,35 @@ interface as part of it. You just saw a few conventions up here:
    Fileman, if you are prompted to "Replace", you need to type "?" and follow
    the help on how to override the default. Replace only shows up if the
    default value is really long (above 15 characters). 
- * Not shown here, but typing a caret (''^'') means bail out. On menus, you go to the higher level menu.
+ * Not shown here, but typing a caret (''^'') means bail out. On menus, it will return you to a higher level in the menu system.
 
 Alright. Now it's time to figure out what that condensed listing means. In
 general, each line in this listing represents a "column" in relational database
 parlance. There are two exceptions to this: ALTERNATE NAME field and
-DESCRIPTION field. Both are as helpfully indicated multiples. A multiple means
+DESCRIPTION field. Both are helpfully indicated as multiples. A multiple means
 that several entries can be stored. This means, for example, that a language
 can have several alternate names. For example, Spanish can have ALTERNATE NAMEs
-of EspaÃ±ol and Catalan. DESCRIPTION fields is a multiple in the way it's
+of Español and Catalan. The DESCRIPTION field is a multiple in the way it's
 stored, but really represents a single word processing (i.e. text blob) field. A word processing
 field is stored by storing each line separately; that's why it's a multiple.
 
-Let's analyze one entry and try to figure out what are all these letters and
-symbols::
+Let's analyze one entry and try to figure out what all these letters and
+symbols are::
 
     .02       TWO LETTER CODE (FJ2), [0;2]
 
 In Fileman, each field must be uniquely numbered, but not necessarily uniquely
 named. In this case, the field number is .02; the field name is ``TWO LETTER
-CODE``. The next set of alphanumerals in parentheses represent the field
+CODE``. The next set of alphanumerics in parentheses represent the field
 storage formatting. In this case, ``FJ2`` means that it's 2 character long free
-text field. The next and last set of alphanumberals in backets signify the
+text field. The next and last set of alphanumberics in brackets signifies the
 storage location of the data.
 
 Storage Location?
 
-Well you see, like C programmers with structures, it matters to Mumps programmers where
+Well you see, like C programmers with structures, it matters to MUMPS programmers where
 their data gets stored. In many cases, it's not important, but programmers
-writing code may need to fetch the values directly from Mumps.
+writing code may need to fetch the values directly from MUMPS.
 
 Ooops. Forgot to mention the second line of the output, while we are speaking
 of storage locations. The second line says::
@@ -143,9 +143,9 @@ This means that the entire file is stored in ^DI(.85,
 
 Now that we have a distant clue on how the language file is stored, let's
 actually look at its contents. To do that, we will use the ``ZWRITE`` command.
-ZWRITE is not part of Mumps, but it is rather a useful debugging tool to show
-you the data. It exists on both GT.M and Cache, but is far more powerful on
-GT.M. The output is really long, so I would only show you a few lines::
+ZWRITE is not part of MUMPS, but it is a useful debugging tool to show
+you the data. It exists on both GT.M and Caché, but is far more powerful on
+GT.M. The output is really long, so I will only show you a few lines::
 
     GTM>ZWRITE ^DI(.85,*)
     ^DI(.85,0)="LANGUAGE^.85I^18^11"
@@ -161,7 +161,7 @@ GT.M. The output is really long, so I would only show you a few lines::
     ^DI(.85,2,1,1,0)="GERMAN, STANDARD"
     <etc>
 
-Good. We see the data. And you actually get a good taste of how Fileman does its work in the Mumps Virtual Machine. ^DI(.85) is the Mumps global (actually part of the global ^DI). Global in Mumps simply means permanent disk storage location; it doesn't refer to a variable that's global in scope, like in many other languages. Inside the global, it's subdivided into different pieces using the caret '^' symbol. Remember this?::
+Good. We see the data. And you actually get a good taste of how Fileman does its work in the MUMPS Virtual Machine. ^DI(.85) is the MUMPS global (actually part of the global ^DI). Global in MUMPS simply means permanent disk storage location; it doesn't refer to a variable that's global in scope, like in many other languages. Inside the global, it's subdivided into different pieces using the caret '^' symbol. Remember this?::
 
     .02       TWO LETTER CODE (FJ2), [0;2]
 
@@ -171,7 +171,7 @@ Can you spot the two letter codes above using the information I just gave you?
 
 Notice that we have two records in this excerpt. The first record is ENGLISH, and the second is GERMAN. if you look at the ``^DI(.85,1,0)`` and ``^DI(.85,2,0)`` nodes, you will notice that the second piece of these nodes is EN and DE respectively.
 
-Now that I showed you this view, I can present to you the Fileman Global Data Dictionary Listing. You access this by typing "GLOBAL" instead of "CONDENSED" in the data dictionary listing.::
+Now that I have showed you this view, I can present to you the Fileman Global Data Dictionary Listing. You access this by typing "GLOBAL" instead of "CONDENSED" in the data dictionary listing.::
 
     Select DATA DICTIONARY UTILITY OPTION:    **L**IST FILE ATTRIBUTES
     START WITH What File: LANGUAGE//         (11 entries)
@@ -246,7 +246,7 @@ This presents the global data structure in a more intuitive format.
 
 Last but not least, let's use the standard listing.
 
-In both the above examples, the listing that is chosen by default is ``STANDARD``. We overrode it the last two times; mainly because it's the most verbose. At this point, we are going to print it for just one field, like this::
+In both of the above examples, the listing that is chosen by default is ``STANDARD``. We overrode it the last two times; mainly because it's the most verbose. At this point, we are going to print it for just one field, like this::
 
     Select DATA DICTIONARY UTILITY OPTION:    LIST FILE ATTRIBUTES
      START WITH What File: LANGUAGE//         (11 entries)
@@ -257,7 +257,7 @@ In both the above examples, the listing that is chosen by default is ``STANDARD`
     Go to field: TWO LETTER CODE
 
     STANDARD DATA DICTIONARY #.85 -- LANGUAGE FILE                3/25/13    PAGE 1
-    STORED IN ^DI(.85,  (11 ENTRIES)   SITE: FILEMAN DEMOSTRATION SITE    (VERSION 2
+    STORED IN ^DI(.85,  (11 ENTRIES)   SITE: FILEMAN DEMONSTRATION SITE    (VERSION 2
     2.2V2)   
 
     DATA          NAME                  GLOBAL        DATA
@@ -274,7 +274,7 @@ In both the above examples, the listing that is chosen by default is ``STANDARD`
                                     language has a two-letter code; for those that
                                     do not leave this field blank.  
 
-                  TECHNICAL DESCR:  Future versions of this file wil include an
+                  TECHNICAL DESCR:  Future versions of this file will include an
                                     optional key on this field.  
 
 
