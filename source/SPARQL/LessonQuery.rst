@@ -632,3 +632,4 @@ We could simplify the expressions by taking advantage of the ";" notation
 
 
 .. _Virtuoso SPARQL Query Editor: http://dbpedia.org/sparql
+.. _DBpedia: http://dbpedia.org/sparql
