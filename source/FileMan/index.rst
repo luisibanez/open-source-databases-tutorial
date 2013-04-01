@@ -7,6 +7,7 @@ Contents:
    :maxdepth: 2
 
    Overview.rst
+   DataModel.rst
    Install.rst
    DataModel.rst
    Enter.rst

@@ -9,7 +9,9 @@ Enter MUMPS first by sourcing fileman.env as before and then running ``mumps -di
 
 .. Note:: Because the device handler is part of the VISTA Kernel, Fileman ships with a very rudimentary device handler. Paging through data may be somewhat painful because you will get only 24 lines at a time. On full VISTA, you can specify your page size.
 
-The first thing we will do is explore the data dictionary (i.e. Schema) of the language file. Text in ** ** is text you have to type::
+The first thing we will do is explore the data dictionary (i.e. Schema) of the language file. Text in ** ** is text you have to type
+
+::
 
     GTM>**D C^DI**
 
@@ -171,7 +173,9 @@ Can you spot the two letter codes above using the information I just gave you?
 
 Notice that we have two records in this excerpt. The first record is ENGLISH, and the second is GERMAN. if you look at the ``^DI(.85,1,0)`` and ``^DI(.85,2,0)`` nodes, you will notice that the second piece of these nodes is EN and DE respectively.
 
-Now that I have showed you this view, I can present to you the Fileman Global Data Dictionary Listing. You access this by typing "GLOBAL" instead of "CONDENSED" in the data dictionary listing.::
+Now that I have showed you this view, I can present to you the Fileman Global Data Dictionary Listing. You access this by typing "GLOBAL" instead of "CONDENSED" in the data dictionary listing.
+
+::
 
     Select DATA DICTIONARY UTILITY OPTION:    **L**IST FILE ATTRIBUTES
     START WITH What File: LANGUAGE//         (11 entries)
