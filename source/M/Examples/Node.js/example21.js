@@ -27,7 +27,7 @@ patient._setDocument(document);
 
 console.log("Adding properties");
 
-var physiotherapyObject = patient.$('treatments').$('physiotherapy');
+var physiotherapyObject = patient.treatments.physiotherapy;
 
 //
 //  Add more elements to the array of physiotherapies,
@@ -44,10 +44,15 @@ physioTheraphyArray.push('neck');
 //
 physiotherapyObject._setDocument(physioTheraphyArray);
 
+// the following works because array member 4 already exists, so the member is overwritten:
+physiotherapyObject[4]._value = 'spine';
+
+// but to create previously non-existent member 5, we must use $() syntax:
+physiotherapyObject.$(5)._value = 'elbow';
 
 console.log("Physiotherapy Treatements:");
-physiotherapyObject._forEach( function( id ) {
-   console.log( physiotherapyObject[id]._value );
+physiotherapyObject._forEach( function( id, subNode ) {
+   console.log('id ' + id + ': ' + subNode._value );
    });
 
 db.close();

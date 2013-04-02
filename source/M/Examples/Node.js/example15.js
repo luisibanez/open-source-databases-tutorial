@@ -25,13 +25,12 @@ patient._setDocument(document);
 
 console.log("Querying properties");
 
-// By quering for a subscript, all its attributes
-// become available as properties.
-var treatementsObject = patient.$('treatments');
+// note that _setDocument() has instantiated all global levels it created as GlobalNode instances,
+// so no need to use $('xxx') syntax to access them:
 
 console.log("Surgeries:");
-patient.treatments.surgeries._forEach( function( id ) {
-  console.log( patient.treatments.surgeries[id]._value );
+patient.treatments.surgeries._forEach( function( id, subNode ) {
+  console.log(subNode._value );
   });
 
 

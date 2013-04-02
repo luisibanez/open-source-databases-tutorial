@@ -27,7 +27,7 @@ patient._setDocument(document);
 
 console.log("Adding properties");
 
-var physiotherapyObject = patient.$('treatments').$('physiotherapy');
+var physiotherapyObject = patient.treatments.physiotherapy;
 
 //
 //  Add more elements to the array of physiotherapies.
@@ -38,8 +38,13 @@ physiotherapyObject.$(4)._value = "neck";
 
 
 console.log("Physiotherapy Treatements:");
-physiotherapyObject._forEach( function( id ) {
-   console.log( physiotherapyObject[id]._value );
+physiotherapyObject._forEach( function( id, subNode ) {
+   console.log('id ' + id + ': ' + subNode._value );
+   });
+
+console.log("or like this: Physiotherapy Treatements:");
+physiotherapyObject._forEach( function( id, subNode ) {
+   console.log('id ' + id + ': ' + physiotherapyObject[id]._value );
    });
 
 db.close();

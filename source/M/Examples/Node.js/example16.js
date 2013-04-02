@@ -21,7 +21,7 @@ patient._setDocument(document);
 
 console.log("Changing properties");
 
-var cityObject = patient.$('city');
+var cityObject = patient.city;
 
 console.log("Old City: " + cityObject._value);
 

@@ -31,8 +31,8 @@ console.log("Retrieving subsections");
 //
 // Retrieving a sub-section as a document.
 //
-var record = patient.$('treatments')._getDocument();
-console.log("patient info: " + JSON.stringify(record));
+var record = patient.treatments._getDocument();
+console.log("patient info: " + JSON.stringify(record, null, 3));
 
 db.close();
 

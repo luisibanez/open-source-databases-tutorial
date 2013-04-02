@@ -27,13 +27,17 @@ patient._setDocument(document);
 
 console.log("Adding properties");
 
-var treatmentsObject = patient.$('treatments');
+var treatmentsObject = patient.treatments;
 
 //
 //  Add more elements to the array of treatments.
 //
-var chemotherapyObject = treatmentsObject.$("chemotherapy");
-var sessionsObject = chemotherapyObject.$("sessions");
+var chemotherapyObject = treatmentsObject.$('chemotherapy');
+var sessionsObject = chemotherapyObject.$('sessions');
+
+// The above two lines need use of $() because these properties haven't previously
+// been instantiated by _setDocument()
+
 sessionsObject.$('January')._value = "dose 1";
 sessionsObject.$('February')._value = "dose 3";
 sessionsObject.$('March')._value = "dose 5";
@@ -41,7 +45,7 @@ sessionsObject.$('April')._value = "dose 3";
 
 
 var record = patient._getDocument();
-console.log("patient info: " + JSON.stringify(record));
+console.log("patient info: " + JSON.stringify(record, null, 3));
 
 db.close();
 
