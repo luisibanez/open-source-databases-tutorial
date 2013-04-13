@@ -3,7 +3,7 @@ Who Uses It
 
 The following is a list of organizations that use M.
 
-This, of course, does not mean that Neo4j is the only database used by these
+This, of course, does not mean that M is the only database used by these
 organizations. Most enterprise system have to combine multiple database
 platforms to satisfy their needs.
 
